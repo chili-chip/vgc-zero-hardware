@@ -1,0 +1,29 @@
+# KiCad autosave & backup
+*~  
+*.bak  
+*.tmp  
+*.autosave
+
+# KiCad-generated
+*.step
+*.stp
+*.wrl
+fp-info-cache
+fp-info-cache-v2
+sym-info-cache
+sym-info-cache-v2
+
+# Exports
+bom/
+gerbers/
+manufacturing/
+fabrication/
+plots/
+*.gbr
+*.drl
+*.zip
+
+# Simulator
+*.cir
+*.raw
+*.net
