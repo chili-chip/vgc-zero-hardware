@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "vgc-zero-symbols")(type "KiCad")(uri "${KIPRJMOD}/vgc-zero-symbols.kicad_sym")(options "")(descr ""))
+)

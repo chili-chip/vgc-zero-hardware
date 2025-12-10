@@ -2470,7 +2470,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "vgc:SSD1351_OLED_128x128"
+		(symbol "vgc-zero-symbols:SSD1351_OLED_128x128"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2671,7 +2671,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "vgc:TP4056_CHARGER"
+		(symbol "vgc-zero-symbols:TP4056_CHARGER"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -4232,7 +4232,7 @@
 		(uuid "a8ff844f-cb29-4f67-a9a7-404d14ee182e")
 	)
 	(symbol
-		(lib_id "vgc:TP4056_CHARGER")
+		(lib_id "vgc-zero-symbols:TP4056_CHARGER")
 		(at 226.06 93.98 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5214,7 +5214,7 @@
 		)
 	)
 	(symbol
-		(lib_id "vgc:SSD1351_OLED_128x128")
+		(lib_id "vgc-zero-symbols:SSD1351_OLED_128x128")
 		(at 203.2 57.15 90)
 		(mirror x)
 		(unit 1)
