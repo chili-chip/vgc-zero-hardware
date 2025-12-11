@@ -9,7 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "vgc zero")
-		(rev "v0.0.2")
+		(rev "v1.0.0")
+		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
 	(layers
@@ -10660,19 +10661,6 @@
 			(font
 				(size 1.5 1.5)
 				(thickness 0.3)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-	)
-	(gr_text "330Ω"
-		(at 53.5 42 0)
-		(layer "F.SilkS")
-		(uuid "0e97a22f-df72-48e5-89d8-8c34c0a9ade2")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
 				(bold yes)
 			)
 			(justify left bottom)
