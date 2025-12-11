@@ -84,6 +84,12 @@ jobs:
           name: gerbers
           path: artifacts/gerbers
 
+      # Package Gerbers as zip and tar.gz
+      - name: Package Gerbers
+        run: |
+          zip -r artifacts/gerbers.zip artifacts/gerbers
+          tar -czf artifacts/gerbers.tar.gz -C artifacts gerbers
+
       # Create GitHub Release and attach artifacts
       - name: Create Release & Upload Assets
         uses: softprops/action-gh-release@v2
@@ -91,6 +97,7 @@ jobs:
           files: |
             artifacts/schematic/schematic.pdf
             artifacts/pcb-image/pcb.png
-            artifacts/gerbers/**
+            artifacts/gerbers.zip
+            artifacts/gerbers.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
