@@ -1,0 +1,60 @@
+name: KiCad 9 CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+env:
+  SCH_FILE: vgc-zero.kicad_sch
+  PCB_FILE: vgc-zero.kicad_pcb
+
+  SYMBOL_LIB: vgc-zero.kicad_sym
+  FOOTPRINT_LIB: vgc-zero.pretty
+
+  OUT_DIR: output
+  OUT_SCH_PDF: output/schematic.pdf
+  OUT_GERBERS_DIR: output/gerbers
+  OUT_PCB_IMG: output/pcb.png
+
+jobs:
+  kicad-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run KiCad 9 Actions
+        uses: actions-for-kicad/kicad-actions@v1.6-k9.0
+        with:
+          schematic_file_name: ${{ env.SCH_FILE }}
+          symbol_libraries: "symbol-library=./${{ env.SYMBOL_LIB }}"
+          run_erc: true
+          schematic_output_pdf: true
+
+          pcb_file_name: ${{ env.PCB_FILE }}
+          footprint_libraries: "footprint-library=./${{ env.FOOTPRINT_LIB }}"
+          run_drc: true
+          pcb_output_gerbers_and_drill: true
+          pcb_output_image: true
+
+      # === ARTIFACT UPLOAD ===
+
+      - name: Upload schematic PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: schematic
+          path: ${{ env.OUT_SCH_PDF }}
+
+      - name: Upload gerbers
+        uses: actions/upload-artifact@v4
+        with:
+          name: gerbers
+          path: ${{ env.OUT_GERBERS_DIR }}
+
+      - name: Upload PCB image
+        uses: actions/upload-artifact@v4
+        with:
+          name: pcb-image
+          path: ${{ env.OUT_PCB_IMG }}
