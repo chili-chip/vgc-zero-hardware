@@ -345,7 +345,7 @@
 	(footprint "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "0b1a1e89-7b0b-4982-a096-6da03a24668e")
-		(at 99 46)
+		(at 99.31 45.15)
 		(descr "LED SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "LED handsolder")
 		(property "Reference" "D1"
@@ -10671,12 +10671,12 @@
 		(uuid "d00b4584-af2d-4847-85fd-f3486584eecb")
 	)
 	(segment
-		(start 97.5125 45.8075)
-		(end 96.525 44.82)
+		(start 97.15 47.17)
+		(end 97.8225 46.4975)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 3)
-		(uuid "43e3ec57-7a77-4440-ba79-13919287581e")
+		(uuid "08b7e7ab-c9e6-40fc-9d30-8df98c4181b7")
 	)
 	(segment
 		(start 68.5 92.5)
@@ -10685,6 +10685,22 @@
 		(layer "F.Cu")
 		(net 3)
 		(uuid "472376bf-c7c4-4700-991a-624f3df2e27b")
+	)
+	(segment
+		(start 97.8225 46.4975)
+		(end 97.8225 45.15)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "5ee1e13e-9607-41b1-b743-b6eb91365ebb")
+	)
+	(segment
+		(start 96.525 47.17)
+		(end 97.15 47.17)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "b2d7b42f-a07b-4105-9dc5-e090bee00b76")
 	)
 	(segment
 		(start 97.5125 46)
@@ -10703,12 +10719,12 @@
 		(uuid "158e9e65-93a1-485d-a06c-995f22cbff6e")
 	)
 	(via
-		(at 96.525 44.82)
+		(at 96.525 47.17)
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
 		(net 3)
-		(uuid "6732a7c2-3298-43ab-95fb-3c17afb6f435")
+		(uuid "38ee0f12-cd56-4878-afd4-92ef21166035")
 	)
 	(segment
 		(start 71.5 62)
@@ -10733,6 +10749,14 @@
 		(layer "B.Cu")
 		(net 3)
 		(uuid "6ef4e879-0e56-4afa-89ce-23c9c1822546")
+	)
+	(segment
+		(start 96.525 47.17)
+		(end 96.525 44.82)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 3)
+		(uuid "7e0acf7e-cc03-41a4-8fc7-916d61528b61")
 	)
 	(segment
 		(start 71.125 64.2)
@@ -10815,20 +10839,20 @@
 		(uuid "f0eae148-4dfb-45ef-b785-ff081470e25c")
 	)
 	(segment
-		(start 100.4875 46)
-		(end 92.9875 38.5)
+		(start 100.7975 45.15)
+		(end 94.1475 38.5)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 7)
-		(uuid "686789ed-4900-4bde-91d8-80b47b06f5e3")
+		(uuid "02b398a2-77a2-4a3f-bbd3-e63335a2fb48")
 	)
 	(segment
-		(start 92.9875 38.5)
+		(start 94.1475 38.5)
 		(end 60.41 38.5)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 7)
-		(uuid "ad84d309-a13b-423f-b9b0-ea5e6a5acaff")
+		(uuid "1d18551a-e75d-462f-a716-7fd0a40cfa11")
 	)
 	(segment
 		(start 60.41 38.5)
@@ -10836,7 +10860,7 @@
 		(width 0.2)
 		(layer "F.Cu")
 		(net 7)
-		(uuid "ee690ef0-c62c-4b45-8334-9530efdd9e93")
+		(uuid "3ad5441b-7fb0-4248-9854-dced6c4c31a7")
 	)
 	(segment
 		(start 60.965 47.35)
