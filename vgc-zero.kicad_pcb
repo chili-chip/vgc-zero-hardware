@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "vgc zero")
-		(rev "v1.0.0")
+		(rev "v1.0.1")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
@@ -2429,7 +2429,7 @@
 		(uuid "c1136ab6-25c9-47d9-8256-0bc10e3a85ba")
 		(at 69.6 40.4)
 		(property "Reference" "DISP1"
-			(at 7.62 17.85 0)
+			(at 22.08 37.36 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "e03b346a-d09f-42cc-9ed8-2740442fa4d7")
@@ -10653,7 +10653,7 @@
 		(layer "Edge.Cuts")
 		(uuid "f2e3f1ee-4513-42bb-82cc-872fecdbe376")
 	)
-	(gr_text "vgc zero v0.0.2"
+	(gr_text "vgc zero v1.0.1"
 		(at 53.78 119.58 0)
 		(layer "F.SilkS")
 		(uuid "042915dc-2295-454a-a102-6fca57adf03a")
