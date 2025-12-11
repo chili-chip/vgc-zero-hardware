@@ -12,10 +12,9 @@ env:
   SYMBOL_LIB: vgc-zero.kicad_sym
   FOOTPRINT_LIB: vgc-zero.pretty
 
-  OUT_DIR: output
-  OUT_SCH_PDF: output/schematic.pdf
-  OUT_GERBERS_DIR: output/gerbers
-  OUT_PCB_IMG: output/pcb.png
+  OUT_SCH_PDF: schematic.pdf
+  OUT_GERBERS_DIR: gerbers
+  OUT_PCB_IMG: pcb.png
 
 jobs:
   kicad-ci:
