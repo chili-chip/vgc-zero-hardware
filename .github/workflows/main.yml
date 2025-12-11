@@ -4,6 +4,8 @@ on:
   push:
     branches: [ master ]
   pull_request:
+  release:
+    types: [published]
 
 env:
   SCH_FILE: vgc-zero.kicad_sch
@@ -19,6 +21,7 @@ env:
 jobs:
   kicad-ci:
     runs-on: ubuntu-latest
+    if: github.event_name != 'release'
 
     steps:
       - name: Checkout Repository
@@ -38,8 +41,6 @@ jobs:
           pcb_output_gerbers_and_drill: true
           pcb_output_image: true
 
-      # === ARTIFACT UPLOAD ===
-
       - name: Upload schematic PDF
         uses: actions/upload-artifact@v4
         with:
@@ -57,3 +58,25 @@ jobs:
         with:
           name: pcb-image
           path: ${{ env.OUT_PCB_IMG }}
+
+  upload-release-assets:
+    name: Upload KiCad Artifacts to Release
+    needs: kicad-ci
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release'
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+
+      - name: Upload assets to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/schematic/schematic.pdf
+            artifacts/pcb-image/pcb.png
+            artifacts/gerbers/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
