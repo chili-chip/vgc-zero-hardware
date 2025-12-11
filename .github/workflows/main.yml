@@ -61,6 +61,7 @@ jobs:
           path: ${{ env.OUT_PCB_IMG }}
 
   release:
+    permissions: write-all
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/')
     needs: kicad-ci
