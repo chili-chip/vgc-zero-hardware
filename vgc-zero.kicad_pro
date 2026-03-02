@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.0,
-          "width": 1.0
+          "drill": 2.0,
+          "height": 4.4,
+          "width": 4.4
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -60,23 +60,39 @@
       ],
       "drc_exclusions": [
         [
-          "courtyards_overlap|59005000|66505000|40fa9398-6966-4261-a19c-c285ca3af358|c1136ab6-25c9-47d9-8256-0bc10e3a85ba",
+          "courtyards_overlap|62005000|110811241|d35b3bfb-1140-49b2-92e1-4d408feb75af|e07addbd-b32b-4263-a821-8c2ac74ba932",
           ""
         ],
         [
-          "courtyards_overlap|65945700|45755000|c1136ab6-25c9-47d9-8256-0bc10e3a85ba|e372c806-60db-4f9c-9c18-8b2c7597f49a",
+          "lib_footprint_mismatch|59750000|111750000|e07addbd-b32b-4263-a821-8c2ac74ba932|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "courtyards_overlap|94505000|66505000|c1136ab6-25c9-47d9-8256-0bc10e3a85ba|fa93a04c-cca1-4cc4-b223-056cb296540c",
+          "lib_footprint_mismatch|59750000|44000000|48fd43ce-f102-47e6-90cd-68727af5650e|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "lib_footprint_mismatch|77000000|90500000|b422b259-51ad-4734-986d-25541c4aba3f|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|59750000|76000000|da81c796-e1b4-4afc-bada-69081378f7e8|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "lib_footprint_mismatch|77540000|68500000|f53de6c3-4816-43a0-85c3-84f54f545ab2|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|99250000|111750000|f0f6ca64-3b95-4746-b67d-fc55fedc627d|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|99250000|44000000|fa774ce1-1375-4528-8621-1e06a26dab38|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|99250000|76000000|fe13d4ec-9957-4f03-9f2d-15bc20c6b9c2|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_edge_clearance|75600000|38000000|8cd68709-5653-4eb8-9a7a-fc50240f2985|f90dfdfc-2734-45ba-ae8a-40510541381d",
+          ""
+        ],
+        [
+          "silk_edge_clearance|83400000|38000000|8cd68709-5653-4eb8-9a7a-fc50240f2985|a601ad1c-21cf-4978-9bd0-c8cab101060f",
           ""
         ]
       ],
