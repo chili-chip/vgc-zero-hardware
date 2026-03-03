@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "vgc zero")
-		(rev "v1.1.0")
+		(rev "v1.1.1")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
@@ -10033,7 +10033,7 @@
 		(layer "User.1")
 		(uuid "1edaf8fe-04db-4959-a04b-8a1006e36a48")
 	)
-	(gr_text "vgc zero v1.1.0"
+	(gr_text "vgc zero v1.1.1"
 		(at 56.32 122.82 0)
 		(layer "F.SilkS")
 		(uuid "042915dc-2295-454a-a102-6fca57adf03a")
