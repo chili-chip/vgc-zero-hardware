@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 2.0,
-          "height": 4.4,
-          "width": 4.4
+          "drill": 1.5,
+          "height": 3.5,
+          "width": 2.2
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -64,15 +64,11 @@
           ""
         ],
         [
+          "lib_footprint_mismatch|102500000|40000000|43cddf49-0431-4624-85d1-44b781f858cf|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "lib_footprint_mismatch|59750000|111750000|e07addbd-b32b-4263-a821-8c2ac74ba932|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|59750000|44000000|48fd43ce-f102-47e6-90cd-68727af5650e|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|59750000|76000000|da81c796-e1b4-4afc-bada-69081378f7e8|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
@@ -80,11 +76,11 @@
           ""
         ],
         [
-          "lib_footprint_mismatch|99250000|44000000|fa774ce1-1375-4528-8621-1e06a26dab38|00000000-0000-0000-0000-000000000000",
+          "silk_edge_clearance|57250000|52500000|da50fc5a-fd1a-4b20-a7d1-adbd2c7c4aae|be56da20-fdd3-45eb-9e95-ae830f3d0013",
           ""
         ],
         [
-          "lib_footprint_mismatch|99250000|76000000|fe13d4ec-9957-4f03-9f2d-15bc20c6b9c2|00000000-0000-0000-0000-000000000000",
+          "silk_edge_clearance|57250000|52500000|da50fc5a-fd1a-4b20-a7d1-adbd2c7c4aae|dd978c14-fc1d-4469-b281-a3ed0716bb98",
           ""
         ],
         [
@@ -277,6 +273,10 @@
   },
   "erc": {
     "erc_exclusions": [
+      [
+        "duplicate_pins|2400300|698500|ebc212f7-ad1b-4987-9144-1715a439f873|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
       [
         "power_pin_not_driven|1346200|520700|48712607-566f-4639-b64a-85d1b01c7ade|00000000-0000-0000-0000-000000000000|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|",
         ""

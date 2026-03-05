@@ -1,0 +1,168 @@
+(footprint "SSD1351_OLED_128x128_WAVESHARE"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "OLED_DISPLAY"
+		(at 23 36 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b78bc1ee-c41b-45b4-b51a-5f21575c1c30")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SSD1351_OLED_128x128_WAVESHARE"
+		(at 23 38.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "7e075cce-cb64-4d1e-8f1f-9d861561de46")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4f72064c-8914-4be7-9a5e-f926f42467e4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cff27801-4540-4222-9915-8e50d033e9bc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 0 0)
+		(end 44.5 37)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "7dc65cb3-fb42-40e2-ac60-2209cdcf414c")
+	)
+	(fp_circle
+		(center 2.5 2.5)
+		(end 0 2.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "68c7c7e1-f684-4cff-8c87-d0064bff1604")
+	)
+	(fp_circle
+		(center 2.5 34.5)
+		(end 0 34.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "99e42da0-475a-4192-9f60-54b0e508c7f7")
+	)
+	(fp_circle
+		(center 42 2.5)
+		(end 44.5 2.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "f7fc6655-d11f-45e8-9bec-b89c63ea502c")
+	)
+	(fp_circle
+		(center 42 34.5)
+		(end 44.5 34.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a4bddf49-5062-4129-9546-c5112635ea2c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 23 40 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "83d26bdf-f561-4614-9cd5-e72d74f166ab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 2.5 2.5)
+		(size 4.4 4.4)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b49ec117-c41b-47a4-8142-45b098649abe")
+	)
+	(pad "1" thru_hole circle
+		(at 2.5 34.5)
+		(size 4.4 4.4)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "909a3ccb-607a-40d3-942a-c3ece9089ccd")
+	)
+	(pad "1" thru_hole circle
+		(at 42 2.5)
+		(size 4.4 4.4)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9eb55186-90fd-4fc2-9ef9-8b61bf2aa3b6")
+	)
+	(pad "1" thru_hole circle
+		(at 42 34.5)
+		(size 4.4 4.4)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f3bfec91-4d82-46d9-ac4e-5ed0db084262")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d-models/1_5inch-rgb-oled-module_asm-1110.stp"
+		(offset
+			(xyz 22.5 -19 7)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)
