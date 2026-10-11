@@ -25,10 +25,10 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run KiCad 9 Actions
-        uses: actions-for-kicad/kicad-actions@v1.6-k9.0
+        uses: actions-for-kicad/kicad-actions@v1.6-k9.0.4
         with:
           schematic_file_name: ${{ env.SCH_FILE }}
           symbol_libraries: "symbol-library=./${{ env.SYMBOL_LIB }}"
@@ -43,19 +43,19 @@ jobs:
 
       # Upload artifacts for release job
       - name: Upload schematic PDF
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: schematic
           path: ${{ env.OUT_SCH_PDF }}
 
       - name: Upload gerbers
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: gerbers
           path: ${{ env.OUT_GERBERS_DIR }}
 
       - name: Upload PCB image
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pcb-image
           path: ${{ env.OUT_PCB_IMG }}
@@ -68,18 +68,18 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Download artifacts from the build job
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: schematic
           path: artifacts/schematic
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: pcb-image
           path: artifacts/pcb-image
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: gerbers
           path: artifacts/gerbers
@@ -92,7 +92,7 @@ jobs:
 
       # Create GitHub Release and attach artifacts
       - name: Create Release & Upload Assets
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             artifacts/schematic/schematic.pdf
