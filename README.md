@@ -8,7 +8,7 @@ Current board revision: **v1.1.4** (2-layer). The schematic (`vgc-zero.kicad_sch
 
 | Ref | Part | Footprint / notes |
 |-----|------|-------------------|
-| MCU1 | Raspberry Pi Pico 2 (RP2350) module | `Module:RaspberryPi_Pico_Common_THT`, through-hole |
+| MCU1 | [Waveshare RP2350-Plus](https://www.waveshare.com/wiki/RP2350-Plus) (RP2350), Pico-compatible pinout | `Module:RaspberryPi_Pico_Common_THT`, through-hole; the schematic uses the generic Pico 2 symbol |
 | DISP1 | [Waveshare 1.5inch RGB OLED Module](https://www.waveshare.com/wiki/1.5inch_RGB_OLED_Module), SSD1351 driver, 128×128, 16-bit colour, SPI | `vgc-zero-footprints:SSD1351_OLED_128x128_WAVESHARE` (mounting holes only) |
 | DISP1_CONN1 | 7-pin JST PH connector for the display cable | `JST_PH_S7B-PH-K_1x07_P2.00mm_Horizontal` |
 | SW1–SW10 | 10× tactile push buttons, 6 mm | `SW_PUSH_6mm_H5mm` |
@@ -18,7 +18,7 @@ Current board revision: **v1.1.4** (2-layer). The schematic (`vgc-zero.kicad_sch
 | J1–J3 | 3× 1×6 2.54 mm right-angle pin headers (Pico GPIO, 3V3, GND) | |
 | H5, H6 | M2 mounting holes | |
 
-Not on this board: battery or charger (the `Tp4056_Charger` footprint in the library is unused), audio amplifier or headphone jack, rotary encoder, shoulder buttons, PSRAM. The board is powered from the Pico's USB port.
+Not on this board: battery or charger (the `Tp4056_Charger` footprint in the library is unused), audio amplifier or headphone jack, rotary encoder, shoulder buttons, PSRAM. The board is powered from the module's USB port.
 
 ## Pin map
 
