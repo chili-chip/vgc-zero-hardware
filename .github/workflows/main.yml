@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Run KiCad 9 Actions
-        uses: actions-for-kicad/kicad-actions@v1.6-k9.0
+        uses: actions-for-kicad/kicad-actions@v1.6-k9.0.4
         with:
           schematic_file_name: ${{ env.SCH_FILE }}
           symbol_libraries: "symbol-library=./${{ env.SYMBOL_LIB }}"
