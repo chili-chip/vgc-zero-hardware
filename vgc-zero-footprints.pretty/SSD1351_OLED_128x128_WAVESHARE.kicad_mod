@@ -1,13 +1,13 @@
 (footprint "SSD1351_OLED_128x128_WAVESHARE"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "OLED_DISPLAY"
 		(at 23 36 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "b78bc1ee-c41b-45b4-b51a-5f21575c1c30")
+		(uuid "55bd46a6-254f-4aac-ad71-85f8e9124022")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 		(at 23 38.5 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "7e075cce-cb64-4d1e-8f1f-9d861561de46")
+		(uuid "fafb3eb4-d26c-42c5-bcf6-cb46fa635a39")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "4f72064c-8914-4be7-9a5e-f926f42467e4")
+		(uuid "b8f9d65a-d6d2-44da-8cff-c4070e693d55")
 		(effects
 			(font
 				(size 1 1)
@@ -45,7 +45,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cff27801-4540-4222-9915-8e50d033e9bc")
+		(uuid "2d56c5a8-5b33-4d23-9a98-1dfd5b624eab")
 		(effects
 			(font
 				(size 1 1)
@@ -54,6 +54,7 @@
 		)
 	)
 	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_rect
 		(start 0 0)
 		(end 44.5 37)
@@ -63,7 +64,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "7dc65cb3-fb42-40e2-ac60-2209cdcf414c")
+		(uuid "c99a4757-b973-4579-ac43-d2310241851f")
 	)
 	(fp_circle
 		(center 2.5 2.5)
@@ -74,7 +75,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "68c7c7e1-f684-4cff-8c87-d0064bff1604")
+		(uuid "0c84c319-f084-47b8-9c45-08bbd8415b30")
 	)
 	(fp_circle
 		(center 2.5 34.5)
@@ -85,7 +86,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "99e42da0-475a-4192-9f60-54b0e508c7f7")
+		(uuid "a33be0f6-acd8-4532-9366-5e7ef8810bbd")
 	)
 	(fp_circle
 		(center 42 2.5)
@@ -96,7 +97,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "f7fc6655-d11f-45e8-9bec-b89c63ea502c")
+		(uuid "1d40fe6d-fd3d-414f-9c3b-c31191b49d02")
 	)
 	(fp_circle
 		(center 42 34.5)
@@ -107,13 +108,13 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "a4bddf49-5062-4129-9546-c5112635ea2c")
+		(uuid "55949fa1-0059-4aed-b149-8054031e2ee1")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 23 40 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "83d26bdf-f561-4614-9cd5-e72d74f166ab")
+		(uuid "9fc1ba64-d9ca-4e4f-9a7f-b5d5087ec548")
 		(effects
 			(font
 				(size 1 1)
@@ -122,36 +123,92 @@
 		)
 	)
 	(pad "1" thru_hole circle
+		(at 42.4942 26.12)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "856aa703-cce4-4561-9ab8-5b5670868364")
+	)
+	(pad "2" thru_hole circle
 		(at 2.5 2.5)
 		(size 4.4 4.4)
 		(drill 2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "b49ec117-c41b-47a4-8142-45b098649abe")
+		(uuid "fb4bb1a6-4b0f-4b8c-9350-4e6a7e8dab36")
 	)
-	(pad "1" thru_hole circle
+	(pad "2" thru_hole circle
 		(at 2.5 34.5)
 		(size 4.4 4.4)
 		(drill 2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "909a3ccb-607a-40d3-942a-c3ece9089ccd")
+		(uuid "8fb5b3db-8be2-4b35-8505-8b424c6d7d88")
 	)
-	(pad "1" thru_hole circle
+	(pad "2" thru_hole circle
 		(at 42 2.5)
 		(size 4.4 4.4)
 		(drill 2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "9eb55186-90fd-4fc2-9ef9-8b61bf2aa3b6")
+		(uuid "94d132f5-ef95-4778-a109-9be5a0e882a7")
 	)
-	(pad "1" thru_hole circle
+	(pad "2" thru_hole circle
 		(at 42 34.5)
 		(size 4.4 4.4)
 		(drill 2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "f3bfec91-4d82-46d9-ac4e-5ed0db084262")
+		(uuid "61ca3bed-2a82-4845-8952-0d1015dd3700")
+	)
+	(pad "2" thru_hole circle
+		(at 42.4942 23.58)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "cf414b9d-4908-4211-934c-aacd597d19a5")
+	)
+	(pad "3" thru_hole circle
+		(at 42.4942 21.04)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a237e64f-a2bb-442d-bd66-0a0ccd0c13a2")
+	)
+	(pad "4" thru_hole circle
+		(at 42.4942 18.5)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a22053d7-bf59-4482-8045-4494aef753e8")
+	)
+	(pad "5" thru_hole circle
+		(at 42.4942 15.96)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f0705273-5704-4c3c-b3a0-c6392620396f")
+	)
+	(pad "6" thru_hole circle
+		(at 42.4942 13.42)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "191801f9-1480-48ac-8839-28298d993690")
+	)
+	(pad "7" thru_hole circle
+		(at 42.4942 10.88)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ea675b77-414b-4394-ba89-fe55bc92b6d1")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d-models/1_5inch-rgb-oled-module_asm-1110.stp"

@@ -27,3 +27,5 @@ plots/
 *.cir
 *.raw
 *.net
+
+.history
