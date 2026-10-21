@@ -42,8 +42,11 @@ The first VGC Zero prototype was built on a breadboard, not on this PCB: Raspber
 
 ## Planned for the next revision
 
-- Display changes from the SSD1351 OLED to a TFT IPS panel, on a 2.54 mm pin header instead of the JST connector
-- Audio noise filtering
+See [docs/next-revision.md](docs/next-revision.md). In short:
+
+- Display stays the Waveshare 1.5" SSD1351 OLED, on a 2.54 mm pin header instead of the JST cable
+- Audio moves to a separate, assembled audio module board based on an existing open design (audio chip still to be chosen)
+- WiFi and Bluetooth from a Raspberry Pi Radio Module 2 (RM2)
 - RTC
 - LED removed or replaced
 
