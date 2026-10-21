@@ -41,6 +41,13 @@ jobs:
           pcb_output_gerbers_and_drill: true
           pcb_output_image: true
 
+      - name: Show ERC and DRC reports
+        if: always()
+        run: |
+          for f in erc.rpt drc.rpt; do
+            if [ -f "$f" ]; then echo "===== $f"; cat "$f"; fi
+          done
+
       # Upload artifacts for release job
       - name: Upload schematic PDF
         uses: actions/upload-artifact@v7
