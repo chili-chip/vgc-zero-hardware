@@ -1,6 +1,6 @@
 # VGC Zero hardware
 
-KiCad 9 project for the **VGC Zero** prototype board, the PCB of [chilichip](https://chilichip.eu)'s open hardware keychain game console. Firmware and games are built with the [chili-chip 32blit SDK](https://github.com/chili-chip/32blit-sdk) (board `chilichip_vgc`).
+KiCad 10 project for the **VGC Zero** prototype board, the PCB of [chilichip](https://chilichip.eu)'s open hardware keychain game console. Firmware and games are built with the [chili-chip 32blit SDK](https://github.com/chili-chip/32blit-sdk) (board `chilichip_vgc`).
 
 Current board revision: **v1.1.4** (2-layer). The schematic (`vgc-zero.kicad_sch`) is the source of truth for everything below.
 
