@@ -292,6 +292,18 @@
         ""
       ],
       [
+        "footprint_filter|2425700|393700|8f37635c-8ab7-42cb-a6d3-c0ae5601ffb8|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "footprint_filter|2489200|419100|8f37635c-8ab7-42cb-a6d3-c0ae5601ffb8|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "footprint_filter|800100|279400|ef0246d9-23a1-421d-bbcd-42bb614d0d51|00000000-0000-0000-0000-000000000000|||",
+        "bug?"
+      ],
+      [
         "power_pin_not_driven|1346200|520700|48712607-566f-4639-b64a-85d1b01c7ade|00000000-0000-0000-0000-000000000000|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|",
         ""
       ],
@@ -509,6 +521,7 @@
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -556,8 +569,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -718,7 +731,7 @@
         "uuid": "d6dba08b-49bf-412e-8449-ecb85e54b8e9"
       }
     ],
-    "used_designators": "#PWR1-11,AUDIO1,SW11,DISP2,J1-2",
+    "used_designators": "#PWR1-18,AUDIO1,DISP2,J1-2,R1-3,SW11",
     "variants": []
   },
   "sheets": [
