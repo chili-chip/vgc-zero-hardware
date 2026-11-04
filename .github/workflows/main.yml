@@ -1,4 +1,4 @@
-name: KiCad 9 CI & Release
+name: KiCad 10 CI & Release
 
 on:
   push:
@@ -27,8 +27,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v7
 
-      - name: Run KiCad 9 Actions
-        uses: actions-for-kicad/kicad-actions@v1.6-k9.0
+      - name: Run KiCad 10 Actions
+        uses: actions-for-kicad/kicad-actions@v2.7-k10.0.7
         with:
           schematic_file_name: ${{ env.SCH_FILE }}
           symbol_libraries: "symbol-library=./${{ env.SYMBOL_LIB }}"
@@ -40,6 +40,13 @@ jobs:
           run_drc: true
           pcb_output_gerbers_and_drill: true
           pcb_output_image: true
+
+      - name: Show ERC and DRC reports
+        if: always()
+        run: |
+          for f in erc.rpt drc.rpt; do
+            if [ -f "$f" ]; then echo "===== $f"; cat "$f"; fi
+          done
 
       # Upload artifacts for release job
       - name: Upload schematic PDF
