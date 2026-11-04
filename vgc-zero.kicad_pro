@@ -76,20 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "lib_footprint_mismatch|79500000|53417500|7db8ca1d-cfbe-4d17-bc7f-9bf6ac695438|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_edge_clearance|75600000|38000000|8cd68709-5653-4eb8-9a7a-fc50240f2985|f90dfdfc-2734-45ba-ae8a-40510541381d",
-          ""
-        ],
-        [
-          "silk_edge_clearance|83400000|38000000|8cd68709-5653-4eb8-9a7a-fc50240f2985|a601ad1c-21cf-4978-9bd0-c8cab101060f",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -191,6 +178,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -202,6 +190,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -213,6 +202,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -731,7 +721,7 @@
         "uuid": "d6dba08b-49bf-412e-8449-ecb85e54b8e9"
       }
     ],
-    "used_designators": "#PWR1-18,AUDIO1,DISP2,J1-2,R1-3,SW11",
+    "used_designators": "#PWR1-18,AUDIO1,BUTTONS1-2,DISP2,J1-2,R1-3,SW11",
     "variants": []
   },
   "sheets": [

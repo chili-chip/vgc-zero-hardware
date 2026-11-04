@@ -9,7 +9,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "AUDIO"
-			(at 3.302 8.636 0)
+			(at 3.302 1.016 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -63,7 +63,7 @@
 		)
 		(symbol "AudioModule_1_1"
 			(rectangle
-				(start -8.89 12.7)
+				(start -8.89 16.51)
 				(end 0 0)
 				(stroke
 					(width 0)
@@ -74,9 +74,9 @@
 				)
 			)
 			(pin input line
-				(at -1.27 15.24 270)
+				(at -1.27 -2.54 90)
 				(length 2.54)
-				(name "VIN"
+				(name "3V3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -92,7 +92,7 @@
 				)
 			)
 			(pin input line
-				(at -1.27 -2.54 90)
+				(at -3.81 -2.54 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -110,9 +110,9 @@
 				)
 			)
 			(pin input line
-				(at -11.43 11.43 0)
+				(at -11.43 13.97 0)
 				(length 2.54)
-				(name "EN"
+				(name "DIN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -128,9 +128,9 @@
 				)
 			)
 			(pin input line
-				(at -11.43 8.89 0)
+				(at -11.43 11.43 0)
 				(length 2.54)
-				(name "GAIN"
+				(name "BCLK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -146,9 +146,9 @@
 				)
 			)
 			(pin input line
-				(at -11.43 6.35 0)
+				(at -11.43 8.89 0)
 				(length 2.54)
-				(name "DI2"
+				(name "LRCLK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -164,9 +164,9 @@
 				)
 			)
 			(pin input line
-				(at -11.43 3.81 0)
+				(at -11.43 6.35 0)
 				(length 2.54)
-				(name "DI0"
+				(name "MODE"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -181,10 +181,224 @@
 					)
 				)
 			)
-			(pin input line
-				(at -11.43 1.27 0)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "ButtonsModule"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "BUTTONS"
+			(at 8.89 -1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ButtonsModule"
+			(at 8.89 -3.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "vgc-zero-footprints:ButtonsModule"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/chili-chip/chili-buttons-module-hardware"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "chilichip buttons module v1.1.0: D-pad, A/B/X/Y, START/SELECT and ON/OFF, each switch to GND (use MCU pull-ups)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "chilichip buttons module gamepad"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "ButtonsModule_0_1"
+			(rectangle
+				(start 0 15.24)
+				(end 17.78 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type color)
+					(color 255 255 194 1)
+				)
+			)
+		)
+		(symbol "ButtonsModule_1_1"
+			(pin passive line
+				(at -2.54 13.97 0)
 				(length 2.54)
-				(name "DI1"
+				(name "LEFT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 11.43 0)
+				(length 2.54)
+				(name "RIGHT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 8.89 0)
+				(length 2.54)
+				(name "UP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 6.35 0)
+				(length 2.54)
+				(name "DOWN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 3.81 0)
+				(length 2.54)
+				(name "START"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 1.27 0)
+				(length 2.54)
+				(name "ON/OFF"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 20.32 13.97 180)
+				(length 2.54)
+				(name "X"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 20.32 11.43 180)
+				(length 2.54)
+				(name "Y"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -192,6 +406,154 @@
 					)
 				)
 				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 20.32 8.89 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 20.32 6.35 180)
+				(length 2.54)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 20.32 3.81 180)
+				(length 2.54)
+				(name "SELECT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 17.78 270)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 17.78 270)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 17.78 270)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 17.78 270)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 17.78 270)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
 					(effects
 						(font
 							(size 1.27 1.27)

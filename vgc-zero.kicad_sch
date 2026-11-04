@@ -12,6 +12,386 @@
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
 	(lib_symbols
+		(symbol "ButtonsModule_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "BUTTONS"
+				(at 8.89 -1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ButtonsModule"
+				(at 8.89 -3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "vgc-zero-footprints:ButtonsModule"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/chili-chip/chili-buttons-module-hardware"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "chilichip buttons module v1.1.0: D-pad, A/B/X/Y, START/SELECT and ON/OFF, each switch to GND (use MCU pull-ups)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "chilichip buttons module gamepad"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ButtonsModule_1_0_1"
+				(rectangle
+					(start 0 15.24)
+					(end 17.78 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type color)
+						(color 255 255 194 1)
+					)
+				)
+			)
+			(symbol "ButtonsModule_1_1_1"
+				(pin passive line
+					(at -2.54 13.97 0)
+					(length 2.54)
+					(name "LEFT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 8.89 0)
+					(length 2.54)
+					(name "UP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 3.81 0)
+					(length 2.54)
+					(name "START"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 17.78 270)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 3.81 180)
+					(length 2.54)
+					(name "SELECT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 13.97 180)
+					(length 2.54)
+					(name "X"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 11.43 180)
+					(length 2.54)
+					(name "Y"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 17.78 270)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 1.27 0)
+					(length 2.54)
+					(name "ON/OFF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 6.35 0)
+					(length 2.54)
+					(name "DOWN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 11.43 0)
+					(length 2.54)
+					(name "RIGHT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 17.78 270)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 6.35 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 8.89 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 17.78 270)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 17.78 270)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x03_Socket"
 			(pin_names
 				(offset 1.016)
@@ -2198,170 +2578,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_Push"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at 1.27 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Push button switch, generic, two pins"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "switch normally-open pushbutton push-button"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SW_Push_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3.3V"
 			(power global)
 			(pin_numbers
@@ -2616,6 +2832,188 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "vgc-zero-symbols:AudioModule"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "AUDIO"
+				(at 3.302 1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AudioModule_1_1"
+				(rectangle
+					(start -8.89 16.51)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -1.27 -2.54 90)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -3.81 -2.54 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 13.97 0)
+					(length 2.54)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 11.43 0)
+					(length 2.54)
+					(name "BCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 8.89 0)
+					(length 2.54)
+					(name "LRCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 6.35 0)
+					(length 2.54)
+					(name "MODE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "vgc-zero-symbols:SSD1351_OLED_128x128_WAVESHARE"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2831,76 +3229,16 @@
 		)
 	)
 	(junction
-		(at 22.86 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "03cb3645-1881-4286-804d-064e42c7f98c")
-	)
-	(junction
 		(at 208.28 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1b0fb21d-1b0e-48df-a56b-fcfd1efe1275")
 	)
 	(junction
-		(at 22.86 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "23852a29-4669-404d-a6e9-9a07d0cf7304")
-	)
-	(junction
-		(at 22.86 176.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "355e2e63-6d17-4daf-8e5f-5a9baebcec22")
-	)
-	(junction
-		(at 22.86 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5a0097da-1610-4fc3-b506-3927d9355447")
-	)
-	(junction
-		(at 22.86 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5abd0c62-b1c3-40e4-b429-fd12aa0e23ba")
-	)
-	(junction
-		(at 22.86 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5e84ebe1-ed36-44f4-88ee-08b49e17ddda")
-	)
-	(junction
 		(at 247.65 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69c9b8ed-acc0-48a8-bc94-ec3f6312f042")
-	)
-	(junction
-		(at 22.86 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "70160cb9-72fb-4ebb-a658-1c36e60e0a1e")
-	)
-	(junction
-		(at 22.86 166.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "93926d28-cbe0-4e06-afaa-4cd2a4741552")
-	)
-	(junction
-		(at 22.86 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e94aaccd-aba2-4363-a53b-5d301affe286")
-	)
-	(junction
-		(at 22.86 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f158e2ae-b151-462d-a0f8-46dff1a1fe24")
 	)
 	(no_connect
 		(at 234.95 55.88)
@@ -2950,13 +3288,13 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 156.21) (xy 40.64 156.21)
+			(xy 25.4 106.68) (xy 34.29 106.68)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "01cd2e3b-7ca6-445e-8e27-db599f64c330")
+		(uuid "06652178-8714-48a3-a09b-7a0c0ad78eaa")
 	)
 	(wire
 		(pts
@@ -2980,7 +3318,17 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 146.05) (xy 234.95 146.05)
+			(xy 66.04 96.52) (xy 57.15 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b23a464-3721-4fdc-b82b-e295652e2661")
+	)
+	(wire
+		(pts
+			(xy 213.36 137.16) (xy 223.52 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3040,6 +3388,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 106.68) (xy 57.15 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ba3e976-6577-4405-afc0-c709b7688e1c")
+	)
+	(wire
+		(pts
 			(xy 261.62 41.91) (xy 266.7 41.91)
 		)
 		(stroke
@@ -3050,13 +3408,13 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 176.53) (xy 22.86 182.88)
+			(xy 82.55 184.15) (xy 80.01 184.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "20b510fb-c4c7-491a-84ab-91ad4d8cc0b3")
+		(uuid "1dfd8cb9-f321-407c-82fd-694fd9fe832e")
 	)
 	(wire
 		(pts
@@ -3070,16 +3428,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 74.93) (xy 22.86 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2686c9c9-fc6f-4e01-b8f3-621118fddd75")
-	)
-	(wire
-		(pts
 			(xy 20.32 27.94) (xy 31.75 27.94)
 		)
 		(stroke
@@ -3087,16 +3435,6 @@
 			(type default)
 		)
 		(uuid "29ee649e-0e5f-4246-a0ae-15523860d26e")
-	)
-	(wire
-		(pts
-			(xy 22.86 146.05) (xy 22.86 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c1de18f-dd24-4668-9a8d-e3b827b4a921")
 	)
 	(wire
 		(pts
@@ -3110,7 +3448,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 133.35) (xy 234.95 133.35)
+			(xy 213.36 124.46) (xy 223.52 124.46)
 		)
 		(stroke
 			(width 0)
@@ -3147,16 +3485,6 @@
 			(type default)
 		)
 		(uuid "32efd696-1ca5-4356-bda3-fdd0dd517384")
-	)
-	(wire
-		(pts
-			(xy 33.02 115.57) (xy 40.64 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "348868a8-1be9-497c-9886-92e4295eb7c9")
 	)
 	(wire
 		(pts
@@ -3200,26 +3528,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 135.89) (xy 22.86 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49e9c477-0d75-49fd-b7fd-1eaa01cecf4b")
-	)
-	(wire
-		(pts
-			(xy 33.02 125.73) (xy 40.64 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4fdccda8-1670-4225-a50e-463b03f1d039")
-	)
-	(wire
-		(pts
 			(xy 102.87 74.93) (xy 111.76 74.93)
 		)
 		(stroke
@@ -3240,7 +3548,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 143.51) (xy 234.95 143.51)
+			(xy 213.36 134.62) (xy 223.52 134.62)
 		)
 		(stroke
 			(width 0)
@@ -3280,6 +3588,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 104.14) (xy 57.15 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "666d580d-9717-4d14-b60e-3cb2093306e0")
+	)
+	(wire
+		(pts
 			(xy 157.48 102.87) (xy 167.64 102.87)
 		)
 		(stroke
@@ -3290,7 +3608,17 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 153.67) (xy 232.41 148.59)
+			(xy 25.4 101.6) (xy 34.29 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67ac4fbb-1858-4988-9ed2-d6cce9b9a22f")
+	)
+	(wire
+		(pts
+			(xy 220.98 144.78) (xy 220.98 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3300,23 +3628,23 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 135.89) (xy 40.64 135.89)
+			(xy 25.4 104.14) (xy 34.29 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6a30759d-3ab8-49d6-a13b-338da8bb3399")
+		(uuid "68e482cb-f159-4b0a-bb3a-f05d05ad53d5")
 	)
 	(wire
 		(pts
-			(xy 33.02 146.05) (xy 40.64 146.05)
+			(xy 25.4 99.06) (xy 34.29 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6b864c4a-2db5-44e0-b692-a13ee20df634")
+		(uuid "6ad31ca0-72d8-4c19-924d-ee0d87f8e10e")
 	)
 	(wire
 		(pts
@@ -3330,16 +3658,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 125.73) (xy 22.86 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f545ebb-8800-4ac7-b29d-21c7e59881d4")
-	)
-	(wire
-		(pts
 			(xy 66.04 30.48) (xy 74.93 30.48)
 		)
 		(stroke
@@ -3347,6 +3665,16 @@
 			(type default)
 		)
 		(uuid "72e59d94-9369-4804-8153-381d2e3dca91")
+	)
+	(wire
+		(pts
+			(xy 45.72 110.49) (xy 45.72 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "743e6e83-242b-4336-94a9-571654b73059")
 	)
 	(wire
 		(pts
@@ -3400,16 +3728,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 156.21) (xy 22.86 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "856a225b-aaff-4126-8113-2a9378b1245c")
-	)
-	(wire
-		(pts
 			(xy 247.65 55.88) (xy 247.65 58.42)
 		)
 		(stroke
@@ -3420,17 +3738,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 105.41) (xy 40.64 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "934b694d-e67e-4718-a333-15f4df771ad7")
-	)
-	(wire
-		(pts
-			(xy 224.79 153.67) (xy 224.79 146.05)
+			(xy 213.36 144.78) (xy 213.36 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3460,16 +3768,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 166.37) (xy 40.64 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a337a2ed-c82c-40ee-88b2-53616768735a")
-	)
-	(wire
-		(pts
 			(xy 66.04 25.4) (xy 74.93 25.4)
 		)
 		(stroke
@@ -3477,6 +3775,16 @@
 			(type default)
 		)
 		(uuid "a6380671-c851-411f-9308-5b5ad96315e7")
+	)
+	(wire
+		(pts
+			(xy 69.85 162.56) (xy 59.69 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a64e581b-e0ef-4ef1-8c73-96c6f3787216")
 	)
 	(wire
 		(pts
@@ -3490,6 +3798,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 101.6) (xy 57.15 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab83da4e-3ae9-4c59-9c2a-1fde31af246a")
+	)
+	(wire
+		(pts
 			(xy 205.74 36.83) (xy 223.52 36.83)
 		)
 		(stroke
@@ -3500,43 +3818,13 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 140.97) (xy 234.95 140.97)
+			(xy 213.36 132.08) (xy 223.52 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b0ecb19d-3442-4b46-8b97-df0c4ed96dbe")
-	)
-	(wire
-		(pts
-			(xy 33.02 74.93) (xy 40.64 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b329d814-4063-4580-99b5-91c6bf71c839")
-	)
-	(wire
-		(pts
-			(xy 22.86 166.37) (xy 22.86 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b996fb46-1fc9-4e4c-9f7d-b04a1a4312b1")
-	)
-	(wire
-		(pts
-			(xy 33.02 85.09) (xy 40.64 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be437884-5fb6-4789-8ae4-0d6d6f5acac3")
 	)
 	(wire
 		(pts
@@ -3547,16 +3835,6 @@
 			(type default)
 		)
 		(uuid "c138c34b-7fd2-4ea0-9ff0-8cc7b4a27da7")
-	)
-	(wire
-		(pts
-			(xy 33.02 95.25) (xy 40.64 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1816821-97f0-486d-a0da-5360f51cc8e5")
 	)
 	(wire
 		(pts
@@ -3590,7 +3868,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 148.59) (xy 234.95 148.59)
+			(xy 220.98 139.7) (xy 223.52 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3607,6 +3885,16 @@
 			(type default)
 		)
 		(uuid "ccb2bd82-890f-4d38-92d8-f0c047c082f6")
+	)
+	(wire
+		(pts
+			(xy 80.01 184.15) (xy 80.01 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd6f596d-4f62-4aa1-acf2-7281165cb8c7")
 	)
 	(wire
 		(pts
@@ -3650,6 +3938,36 @@
 	)
 	(wire
 		(pts
+			(xy 77.47 182.88) (xy 77.47 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8bc39aa-9cca-4edf-be97-f4464daca334")
+	)
+	(wire
+		(pts
+			(xy 66.04 99.06) (xy 57.15 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da2addc6-71df-4ef1-aa57-04f6ef01c40c")
+	)
+	(wire
+		(pts
+			(xy 69.85 170.18) (xy 59.69 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db667590-2a46-4a5c-ab8a-62ae1a683bcf")
+	)
+	(wire
+		(pts
 			(xy 20.32 30.48) (xy 20.32 35.56)
 		)
 		(stroke
@@ -3670,13 +3988,23 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 176.53) (xy 40.64 176.53)
+			(xy 69.85 165.1) (xy 59.69 165.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dc3c0d20-0fef-4808-8ac0-d86ba80d5702")
+		(uuid "dba145f5-4ea3-41ce-98ff-20294c74595f")
+	)
+	(wire
+		(pts
+			(xy 25.4 93.98) (xy 34.29 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df60ba16-9842-4193-bf06-9799cb4e323a")
 	)
 	(wire
 		(pts
@@ -3710,23 +4038,13 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 138.43) (xy 234.95 138.43)
+			(xy 213.36 129.54) (xy 223.52 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ea96ce54-ed7a-4930-b566-cfc157a5b3f0")
-	)
-	(wire
-		(pts
-			(xy 22.86 85.09) (xy 22.86 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb98fe1c-cdaf-45bb-8b1a-3bd42b294c1a")
 	)
 	(wire
 		(pts
@@ -3740,13 +4058,13 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 95.25) (xy 22.86 125.73)
+			(xy 69.85 167.64) (xy 59.69 167.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f064d342-82e1-479a-88cc-be28be124549")
+		(uuid "ed0df29c-26b2-4f5c-804f-d15c1541d9b0")
 	)
 	(wire
 		(pts
@@ -3777,6 +4095,16 @@
 			(type default)
 		)
 		(uuid "f54cd4bc-6a86-416c-87b6-d6b8367cdbd5")
+	)
+	(wire
+		(pts
+			(xy 25.4 96.52) (xy 34.29 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f63127ad-bbc5-442b-aabb-837807a4f400")
 	)
 	(wire
 		(pts
@@ -3820,7 +4148,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 135.89) (xy 234.95 135.89)
+			(xy 213.36 127) (xy 223.52 127)
 		)
 		(stroke
 			(width 0)
@@ -3858,16 +4186,6 @@
 		)
 		(uuid "0c03466b-2b91-4e8f-be14-8d96d06ae6e5")
 	)
-	(label "GPIO7"
-		(at 40.64 125.73 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0cac1206-09cc-4804-a372-6331b4733895")
-	)
 	(label "SWCLK"
 		(at 66.04 25.4 0)
 		(effects
@@ -3877,6 +4195,16 @@
 			(justify left bottom)
 		)
 		(uuid "133d301f-ea38-49c3-94c8-249265893381")
+	)
+	(label "GPIO11"
+		(at 66.04 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "14c99197-85db-4e28-afbc-6530e608d236")
 	)
 	(label "GPIO22"
 		(at 167.64 107.95 180)
@@ -3897,6 +4225,16 @@
 			(justify left bottom)
 		)
 		(uuid "1c3dea41-307d-47fb-80aa-58107494ba85")
+	)
+	(label "GPIO22"
+		(at 59.69 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "242f8b58-22b4-4113-b123-68c24b73e330")
 	)
 	(label "GPIO9"
 		(at 102.87 113.03 0)
@@ -3928,8 +4266,18 @@
 		)
 		(uuid "2eea752f-193f-4023-88ff-221f90bff646")
 	)
+	(label "GPIO3"
+		(at 25.4 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2ff6d67e-05d0-4b1b-ad1a-8859371efcd5")
+	)
 	(label "DISP_DIN"
-		(at 224.79 143.51 0)
+		(at 213.36 134.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3937,6 +4285,16 @@
 			(justify left bottom)
 		)
 		(uuid "30f29202-d808-474d-ba51-13a0cb7f2d04")
+	)
+	(label "GPIO8"
+		(at 66.04 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "31107a81-9903-4e36-8ee4-f31bd291a9a8")
 	)
 	(label "GPIO13"
 		(at 237.49 77.47 90)
@@ -3959,7 +4317,7 @@
 		(uuid "3a5bc014-8674-496a-9dab-7833a63a806b")
 	)
 	(label "DISP_DC"
-		(at 224.79 135.89 0)
+		(at 213.36 127 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3967,6 +4325,16 @@
 			(justify left bottom)
 		)
 		(uuid "4247e2b7-2166-4284-8c6e-d8d3c4f35aa0")
+	)
+	(label "GPIO7"
+		(at 25.4 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "45df48ec-86c4-4982-8db9-225dfbf2e6f0")
 	)
 	(label "DISP_DIN"
 		(at 167.64 100.33 180)
@@ -3988,15 +4356,25 @@
 		)
 		(uuid "4c0de0eb-9fc6-46d2-8acc-13a45f65efde")
 	)
-	(label "GPIO11"
-		(at 40.64 166.37 180)
+	(label "GPIO12"
+		(at 66.04 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "564856c2-1499-4906-91c8-d76b296a7900")
+		(uuid "4f2f7185-2769-400c-9c5f-8f2110195c9f")
+	)
+	(label "GPIO10"
+		(at 66.04 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5c2aad99-8f07-4eb4-bfb2-0810de8cb2cf")
 	)
 	(label "GPIO1"
 		(at 22.86 25.4 0)
@@ -4018,6 +4396,16 @@
 		)
 		(uuid "6b56a443-63c1-460a-bab4-0d07d1270868")
 	)
+	(label "GPIO27"
+		(at 59.69 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6d508ea8-d291-4848-8d07-eb8843e41756")
+	)
 	(label "GPIO13"
 		(at 102.87 123.19 0)
 		(effects
@@ -4027,6 +4415,16 @@
 			(justify left bottom)
 		)
 		(uuid "79200b06-f612-4d3e-8b1b-9141a086306a")
+	)
+	(label "GPIO26"
+		(at 59.69 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7d3facd0-f864-478f-82ef-7933c53c284c")
 	)
 	(label "GPIO0"
 		(at 102.87 90.17 0)
@@ -4047,6 +4445,16 @@
 			(justify right bottom)
 		)
 		(uuid "7f2c521c-5bf9-461d-a3e2-533f6ddc34e1")
+	)
+	(label "GPIO2"
+		(at 25.4 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7fa82b74-fda8-46de-bb08-160b685d7b1f")
 	)
 	(label "DISP_CS"
 		(at 167.64 95.25 180)
@@ -4078,15 +4486,15 @@
 		)
 		(uuid "8cfca4db-fa44-4b6c-b4cd-2153d2949204")
 	)
-	(label "GPIO5"
-		(at 40.64 105.41 180)
+	(label "GPIO6"
+		(at 25.4 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "909ce3de-8a5d-4564-8893-5bee11bc5525")
+		(uuid "95de626b-ecb4-4edd-8a71-30ec1f02b45d")
 	)
 	(label "GPIO27"
 		(at 167.64 120.65 180)
@@ -4149,7 +4557,7 @@
 		(uuid "a70475b8-9870-4ac4-9d9c-0ac770d8b333")
 	)
 	(label "DISP_RST"
-		(at 224.79 133.35 0)
+		(at 213.36 124.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4157,6 +4565,26 @@
 			(justify left bottom)
 		)
 		(uuid "aaf6fcfa-5ca0-43de-8afe-43bd0596582e")
+	)
+	(label "GPIO9"
+		(at 66.04 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ae29aa0b-e456-46a4-8fa4-8ae6445f0b31")
+	)
+	(label "GPIO4"
+		(at 25.4 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b379b9db-e990-4450-8060-4ea087444c62")
 	)
 	(label "DISP_DC"
 		(at 167.64 105.41 180)
@@ -4188,26 +4616,6 @@
 		)
 		(uuid "b8065e87-7f12-41d1-ab31-06f94c7b52c3")
 	)
-	(label "GPIO8"
-		(at 40.64 135.89 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ba65dafa-d913-46c8-b8d4-cd3cd3f3c19f")
-	)
-	(label "GPIO12"
-		(at 40.64 176.53 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "baba85f4-45c5-4951-86d3-aef58bb29079")
-	)
 	(label "GPIO14"
 		(at 102.87 125.73 0)
 		(effects
@@ -4229,7 +4637,7 @@
 		(uuid "bfd80f1e-78b6-4e20-b4ff-e0689650d843")
 	)
 	(label "DISP_CLK"
-		(at 224.79 140.97 0)
+		(at 213.36 132.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4238,45 +4646,15 @@
 		)
 		(uuid "c4ef978e-0119-4661-bab4-c6acddfd38e7")
 	)
-	(label "GPIO10"
-		(at 40.64 156.21 180)
+	(label "GPIO28"
+		(at 59.69 170.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "cbad96f6-1189-405f-98de-7bdcd3564f3b")
-	)
-	(label "GPIO3"
-		(at 40.64 85.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d1f90fdf-5793-49a0-ad18-55f3fad2d57d")
-	)
-	(label "GPIO6"
-		(at 40.64 115.57 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d7ea0ede-db56-4aac-a928-7abdfe1dd2df")
-	)
-	(label "GPIO4"
-		(at 40.64 95.25 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "df9303b5-0cc1-4af3-a87c-0e3a1678fe84")
+		(uuid "dbc6bee3-d1ca-433a-8b7b-1252c516e421")
 	)
 	(label "SWCLK"
 		(at 102.87 74.93 0)
@@ -4287,16 +4665,6 @@
 			(justify left bottom)
 		)
 		(uuid "e40c2328-25a3-4baf-9d35-3d1cb6982a96")
-	)
-	(label "GPIO2"
-		(at 40.64 74.93 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e66f1507-a5b9-4f53-82db-03eaffba29dc")
 	)
 	(label "SWDIO"
 		(at 102.87 77.47 0)
@@ -4318,18 +4686,8 @@
 		)
 		(uuid "e88c1c71-cbd8-4886-9a4d-f80f4d9532e0")
 	)
-	(label "GPIO9"
-		(at 40.64 146.05 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "eb37a5d4-74f8-4e3c-830d-01316d3b3362")
-	)
 	(label "DISP_CS"
-		(at 224.79 138.43 0)
+		(at 213.36 129.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4368,6 +4726,16 @@
 		)
 		(uuid "f556757b-a774-42a2-ba06-abd2c6f190c3")
 	)
+	(label "GPIO5"
+		(at 25.4 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fb006d0a-7ae8-4674-84ac-22670ebb70f3")
+	)
 	(symbol
 		(lib_id "MCU_Module:RaspberryPi_Pico_Debug")
 		(at 134.62 105.41 0)
@@ -4402,7 +4770,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:RaspberryPi_Pico_SMD_HandSolder"
+		(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
 			(at 134.62 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -4585,6 +4953,178 @@
 		)
 	)
 	(symbol
+		(lib_id "vgc-zero-symbols:AudioModule")
+		(at 81.28 176.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2790c811-d3d3-4024-9d4d-4d816c7ada6d")
+		(property "Reference" "U2"
+			(at 82.55 167.0049 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AUDIO_MODULE"
+			(at 82.55 169.5449 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "vgc-zero-footprints:AudioModule"
+			(at 81.28 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a234b4a8-1ecf-4fba-b90a-1c93337d9c0a")
+		)
+		(pin "2"
+			(uuid "b67bdc3d-0a0a-40b9-b04b-de8e3866bf5b")
+		)
+		(pin "5"
+			(uuid "e81522b5-861b-432f-a43e-0fc0eefc7c07")
+		)
+		(pin "3"
+			(uuid "dbb09fc2-0b38-4354-91dc-43f10c45bcfd")
+		)
+		(pin "4"
+			(uuid "71588d4d-9bb2-4668-bf5e-1d2ca471995f")
+		)
+		(pin "6"
+			(uuid "d9024a7f-b3df-485e-b743-08139f9750c6")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 45.72 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2bf993f7-850d-44de-8217-c4ed99c036a4")
+		(property "Reference" "#PWR03"
+			(at 45.72 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 45.72 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "137e3690-337b-4260-b758-78b500324796")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 250.19 77.47 180)
 		(unit 1)
@@ -4663,99 +5203,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 166.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2de01896-62dd-49a9-b119-7421e5f6bb85")
-		(property "Reference" "SW10"
-			(at 27.94 158.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 161.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "06610401-6e3d-4f3a-956e-5cb303b5a072")
-		)
-		(pin "2"
-			(uuid "31da7567-4cc0-496a-9345-71af06cbe0ee")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
-		(at 232.41 153.67 180)
+		(at 220.98 144.78 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4766,7 +5215,7 @@
 		(fields_autoplaced yes)
 		(uuid "30eaec32-5bae-4a33-9ead-113ce742f5b1")
 		(property "Reference" "#PWR08"
-			(at 232.41 149.86 0)
+			(at 220.98 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4777,7 +5226,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 232.41 158.75 0)
+			(at 220.98 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4787,7 +5236,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 232.41 153.67 0)
+			(at 220.98 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4798,7 +5247,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 232.41 153.67 0)
+			(at 220.98 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4809,7 +5258,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 232.41 153.67 0)
+			(at 220.98 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4910,8 +5359,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 74.93 0)
+		(lib_id "power:+3.3V")
+		(at 82.55 184.15 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4920,9 +5369,10 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3623d563-36ca-440a-b0ae-a31a022c103b")
-		(property "Reference" "SW1"
-			(at 27.94 67.31 0)
+		(uuid "457efe78-c328-4839-b0a6-a48f1355730f")
+		(property "Reference" "#PWR06"
+			(at 78.74 184.15 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4931,18 +5381,19 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
-			(at 27.94 69.85 0)
+		(property "Value" "+3.3V"
+			(at 86.36 184.1499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 69.85 0)
+		(property "Footprint" ""
+			(at 82.55 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4953,7 +5404,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 69.85 0)
+			(at 82.55 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4963,19 +5414,8 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 74.93 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 82.55 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4986,106 +5426,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "52a9c445-0f3f-4e73-aad0-72b998bacfe7")
-		)
-		(pin "2"
-			(uuid "855598f0-6f42-4d95-9797-06d9f00a33c9")
+			(uuid "1e9c7827-d986-45cc-9e11-241c5d47652f")
 		)
 		(instances
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 156.21 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3af3acb5-4cf7-43a9-9537-d0a6adf0a659")
-		(property "Reference" "SW9"
-			(at 27.94 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 151.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0ee632be-7252-4cf2-8912-d7d3be0c6cbf")
-		)
-		(pin "2"
-			(uuid "e75e1ad4-4ee4-4604-805a-377a9a11218b")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW9")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -5405,8 +5751,131 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 85.09 0)
+		(lib_name "ButtonsModule_1")
+		(lib_id "vgc-zero-symbols:ButtonsModule")
+		(at 36.83 92.71 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "68f23ace-5301-4c3b-b68a-dde151253935")
+		(property "Reference" "U5"
+			(at 38.354 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BUTTONS_MODULE"
+			(at 45.466 91.186 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "vgc-zero-footprints:ButtonsModule"
+			(at 36.83 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/chili-chip/chili-buttons-module-hardware"
+			(at 36.83 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "chilichip buttons module v1.1.0: D-pad, A/B/X/Y, START/SELECT and ON/OFF, each switch to GND (use MCU pull-ups)"
+			(at 36.83 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "924ef79d-f7c7-43e0-8c92-a14d3b94dd2c")
+		)
+		(pin "13"
+			(uuid "b24e132f-9f96-4bf3-be72-41c1a4c5e5a2")
+		)
+		(pin "14"
+			(uuid "3a7b2d37-b812-4fc7-8556-01e7c8b35a5c")
+		)
+		(pin "3"
+			(uuid "d4177f2a-0d8c-411f-81b0-fe3a15a84a0e")
+		)
+		(pin "2"
+			(uuid "31738d2e-5281-4a78-9945-05e0f17059fd")
+		)
+		(pin "12"
+			(uuid "629c3b48-8dab-4e79-94c7-c6e13f441de6")
+		)
+		(pin "8"
+			(uuid "47f2ede9-05a0-4cf1-ab25-405e8a170000")
+		)
+		(pin "16"
+			(uuid "8f5416e6-c664-4be4-a455-b43605294476")
+		)
+		(pin "7"
+			(uuid "d6d611cc-0112-42a3-bcd6-c4cd6f074096")
+		)
+		(pin "5"
+			(uuid "5b873511-2842-40c9-b041-f56a84cfff5e")
+		)
+		(pin "9"
+			(uuid "fb52858b-14ea-4c64-91ca-396b67d82a12")
+		)
+		(pin "4"
+			(uuid "d430ed4c-54d5-459c-836d-08b3a8d30e35")
+		)
+		(pin "15"
+			(uuid "768963a0-a3a9-4531-8ad1-8a728dfdd94c")
+		)
+		(pin "11"
+			(uuid "703a89a3-4354-473a-8897-311bc9bf8136")
+		)
+		(pin "1"
+			(uuid "8fd8f776-7c65-441a-a70d-282bb38bd7a5")
+		)
+		(pin "10"
+			(uuid "04ff4200-6c63-4de7-adf4-5b510a644db8")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 77.47 182.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5415,9 +5884,10 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6d186ffb-69ce-424d-a86f-872c2c4af896")
-		(property "Reference" "SW2"
-			(at 27.94 77.47 0)
+		(uuid "74d1f59b-640d-4f05-8955-b4a79c81e7cc")
+		(property "Reference" "#PWR07"
+			(at 77.47 189.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5426,8 +5896,8 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
-			(at 27.94 80.01 0)
+		(property "Value" "GND"
+			(at 77.47 187.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5436,8 +5906,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 80.01 0)
+		(property "Footprint" ""
+			(at 77.47 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5448,7 +5918,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 80.01 0)
+			(at 77.47 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5458,19 +5928,8 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 85.09 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 77.47 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5481,15 +5940,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a3480f39-af34-48ab-b930-05e556630c53")
-		)
-		(pin "2"
-			(uuid "1249c393-7ca9-4bf3-9b86-b9410f55799f")
+			(uuid "12afe9e5-899c-4918-b53e-1cba8e3aa2b6")
 		)
 		(instances
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW2")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -5948,7 +6404,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 224.79 153.67 0)
+		(at 213.36 144.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5959,7 +6415,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f646fdc-120d-4e38-8095-6b04ca502f60")
 		(property "Reference" "#PWR04"
-			(at 224.79 160.02 0)
+			(at 213.36 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5970,7 +6426,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 224.79 158.75 0)
+			(at 213.36 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5980,7 +6436,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 224.79 153.67 0)
+			(at 213.36 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5991,7 +6447,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 224.79 153.67 0)
+			(at 213.36 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6002,7 +6458,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 224.79 153.67 0)
+			(at 213.36 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6019,279 +6475,6 @@
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9349fa00-684b-4251-828f-093c2127df43")
-		(property "Reference" "SW4"
-			(at 27.94 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9f925b6c-950d-473f-aa68-f7dba56e7eae")
-		)
-		(pin "2"
-			(uuid "cd276ba1-629a-4dcb-9599-f71869f6a058")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 176.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "94b3c010-be1b-4d7b-ada1-0bdbd2a5b65b")
-		(property "Reference" "SW11"
-			(at 27.94 168.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 171.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS"
-			(at 27.94 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6ae376ca-59d9-4788-a686-4edf1fcc50ca")
-		)
-		(pin "2"
-			(uuid "293be20f-7416-42c1-80c9-1649f9b118a4")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 95.25 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9610d053-1e78-497a-84b3-770cdb3f4aa9")
-		(property "Reference" "SW3"
-			(at 27.94 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4e090913-42a7-41bd-a912-425c29ee103d")
-		)
-		(pin "2"
-			(uuid "e40ed684-de29-49e7-a589-febd68eb2f3a")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW3")
 					(unit 1)
 				)
 			)
@@ -6371,84 +6554,6 @@
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 22.86 182.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a5c339c-6b1b-415d-bdd3-556f178d8e4e")
-		(property "Reference" "#PWR03"
-			(at 22.86 189.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 22.86 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 22.86 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 22.86 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 22.86 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e7529e2f-7765-46c5-afe9-1bcae7938ddf")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -6692,188 +6797,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 115.57 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cabbdb8e-97b8-4766-b3bc-1054ff9f6a26")
-		(property "Reference" "SW5"
-			(at 27.94 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "009e8470-56b8-4279-8d1a-2321ccd053c8")
-		)
-		(pin "2"
-			(uuid "aa21e302-9cf5-4a90-bd5f-ccbcc61b37b0")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 135.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d5434ddc-3fe1-416c-9268-f44519a0ed4f")
-		(property "Reference" "SW7"
-			(at 27.94 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cdb0e8ae-dc4b-4c9b-afdd-44a325ff885f")
-		)
-		(pin "2"
-			(uuid "563655d3-6655-48a6-a69c-f4eb6eaf79aa")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
 		(at 36.83 25.4 0)
 		(mirror y)
@@ -7042,99 +6965,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e8c60597-d15c-4d03-a6e8-07d5c3f7eef6")
-		(property "Reference" "SW8"
-			(at 27.94 138.43 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b5470da6-e69f-460e-bff6-a96918b33aab")
-		)
-		(pin "2"
-			(uuid "cc4f4134-d32e-4e69-8539-c0c9a5c957be")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "vgc-zero-symbols:SSD1351_OLED_128x128_WAVESHARE")
-		(at 247.65 128.27 0)
+		(at 236.22 119.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7145,7 +6977,7 @@
 		(fields_autoplaced yes)
 		(uuid "ebc212f7-ad1b-4987-9144-1715a439f873")
 		(property "Reference" "U4"
-			(at 261.62 139.6999 0)
+			(at 250.19 130.8099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7156,7 +6988,7 @@
 			)
 		)
 		(property "Value" "DISPLAY_MODULE"
-			(at 261.62 142.2399 0)
+			(at 250.19 133.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7167,7 +6999,7 @@
 			)
 		)
 		(property "Footprint" "vgc-zero-footprints:SSD1351_OLED_128x128_WAVESHARE"
-			(at 247.65 128.27 0)
+			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7178,7 +7010,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.waveshare.com/wiki/1.5inch_RGB_OLED_Module#Specification"
-			(at 247.65 128.27 0)
+			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7189,7 +7021,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 247.65 128.27 0)
+			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7200,7 +7032,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 247.65 128.27 0)
+			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7320,97 +7152,6 @@
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 27.94 125.73 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fd7b20bf-c34f-4922-9871-3f1e950d374d")
-		(property "Reference" "SW6"
-			(at 27.94 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 27.94 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H5mm"
-			(at 27.94 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 27.94 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 27.94 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ad69b033-71b2-4673-80a9-8b194377b29a")
-		)
-		(pin "2"
-			(uuid "f8e844cb-9383-4c95-a61b-5a93a3361330")
-		)
-		(instances
-			(project "vgc-zero"
-				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
-					(reference "SW6")
 					(unit 1)
 				)
 			)
