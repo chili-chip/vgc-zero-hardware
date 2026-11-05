@@ -5,9 +5,9 @@
 	(uuid "d6dba08b-49bf-412e-8449-ecb85e54b8e9")
 	(paper "A4")
 	(title_block
-		(title "VGC ZERO")
+		(title "CHILICHIP CONSOLE")
 		(date "2025-12-05")
-		(rev "v1.1.4")
+		(rev "v2.0.0")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
@@ -60,7 +60,7 @@
 					)
 				)
 			)
-			(property "Description" "chilichip buttons module v1.1.0: D-pad, A/B/X/Y, START/SELECT and ON/OFF, each switch to GND (use MCU pull-ups)"
+			(property "Description" "chilichip buttons module: GBA-style D-pad, A/B, X/Y, Start/Select, castellated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -242,10 +242,10 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin no_connect line
 					(at -2.54 1.27 0)
 					(length 2.54)
-					(name "ON/OFF"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -532,7 +532,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MCU_Module:RaspberryPi_Pico"
+		(symbol "MCU_Module:RaspberryPi_Pico_Debug"
 			(pin_names
 				(offset 0.762)
 			)
@@ -563,7 +563,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
+			(property "Footprint" "Module:RaspberryPi_Pico_SMD_HandSolder"
 				(at 0 -46.99 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -585,7 +585,7 @@
 					)
 				)
 			)
-			(property "Description" "Versatile and inexpensive microcontroller module powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
+			(property "Description" "Versatile and inexpensive microcontroller module (with debug pins) powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
 				(at 0 -52.07 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -596,7 +596,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "RP2350A M33 RISC-V Hazard3 usb"
+			(property "ki_keywords" "RP2350A M33 RISC-V Hazard3 usb swd"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -607,7 +607,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "RaspberryPi?Pico?Common* RaspberryPi?Pico?SMD*"
+			(property "ki_fp_filters" "RaspberryPi?Pico?SMD*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -618,7 +618,7 @@
 					)
 				)
 			)
-			(symbol "RaspberryPi_Pico_0_1"
+			(symbol "RaspberryPi_Pico_Debug_0_1"
 				(rectangle
 					(start -19.05 34.29)
 					(end 19.05 -31.75)
@@ -691,7 +691,7 @@
 					)
 				)
 			)
-			(symbol "RaspberryPi_Pico_1_1"
+			(symbol "RaspberryPi_Pico_Debug_1_1"
 				(pin bidirectional line
 					(at -22.86 15.24 0)
 					(length 3.81)
@@ -1563,6 +1563,61 @@
 					)
 					(alternate "VBUS_IN" power_in line)
 				)
+				(pin input line
+					(at -22.86 30.48 0)
+					(length 3.81)
+					(name "SWCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -22.86 27.94 0)
+					(length 3.81)
+					(name "SWDIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(embedded_fonts no)
 		)
@@ -2305,7 +2360,7 @@
 					)
 				)
 			)
-			(property "Value" ""
+			(property "Value" "AudioModule"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2315,18 +2370,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
+			(property "Footprint" "vgc-zero-footprints:AudioModule"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2337,7 +2381,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Datasheet" "https://github.com/chili-chip/chili-audio-module-hardware"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "chilichip audio module: MAX98357A I2S class D amplifier, castellated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2702,6 +2757,10 @@
 		(uuid "1bde6fef-048e-4e41-b1e3-78c0b2e20165")
 	)
 	(no_connect
+		(at 111.76 92.71)
+		(uuid "28d186c1-19a6-491e-b836-09f895954715")
+	)
+	(no_connect
 		(at 157.48 113.03)
 		(uuid "38ababe7-fc9d-42fd-bd56-a42654e4e378")
 	)
@@ -2726,12 +2785,32 @@
 		(uuid "7fb0e6f6-43ad-4d12-868c-4c8e08e0f0d2")
 	)
 	(no_connect
+		(at 111.76 77.47)
+		(uuid "a22d337b-87ea-42c1-8904-3869520290fc")
+	)
+	(no_connect
 		(at 129.54 67.31)
 		(uuid "abeef5ee-c1c7-4310-84df-898bafdb5676")
 	)
 	(no_connect
 		(at 157.48 128.27)
 		(uuid "b343af33-350c-4398-b1a4-8408bb72f93b")
+	)
+	(no_connect
+		(at 111.76 90.17)
+		(uuid "faddee44-f7d8-44bf-82a8-83991462e888")
+	)
+	(no_connect
+		(at 111.76 74.93)
+		(uuid "fe6d6d23-6e69-4f99-aca1-de002d4e7f80")
+	)
+	(no_connect
+		(at 41.91 38.1)
+		(uuid "c3ce352a-ba2e-4125-bccf-8b3a9a496cd0")
+	)
+	(no_connect
+		(at 111.76 95.25)
+		(uuid "dbf16613-2200-44b0-a0bb-dd5cc0138285")
 	)
 	(wire
 		(pts
@@ -2745,7 +2824,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 106.68) (xy 34.29 106.68)
+			(xy 33.02 50.8) (xy 41.91 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2775,7 +2854,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 96.52) (xy 57.15 96.52)
+			(xy 73.66 40.64) (xy 64.77 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2792,16 +2871,6 @@
 			(type default)
 		)
 		(uuid "0bd2c414-563d-45ab-a7e5-d46361e43566")
-	)
-	(wire
-		(pts
-			(xy 102.87 90.17) (xy 111.76 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0bf3acc7-c8f4-47a4-b7e8-6998bd57b69e")
 	)
 	(wire
 		(pts
@@ -2845,7 +2914,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 106.68) (xy 57.15 106.68)
+			(xy 73.66 50.8) (xy 64.77 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2865,23 +2934,13 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 184.15) (xy 80.01 184.15)
+			(xy 58.42 175.26) (xy 55.88 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1dfd8cb9-f321-407c-82fd-694fd9fe832e")
-	)
-	(wire
-		(pts
-			(xy 102.87 95.25) (xy 111.76 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24e5d812-ce2e-4465-91f4-5e3540712453")
 	)
 	(wire
 		(pts
@@ -2995,7 +3054,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 104.14) (xy 57.15 104.14)
+			(xy 73.66 48.26) (xy 64.77 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3015,7 +3074,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 101.6) (xy 34.29 101.6)
+			(xy 33.02 45.72) (xy 41.91 45.72)
 		)
 		(stroke
 			(width 0)
@@ -3035,7 +3094,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 104.14) (xy 34.29 104.14)
+			(xy 33.02 48.26) (xy 41.91 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3045,7 +3104,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 99.06) (xy 34.29 99.06)
+			(xy 33.02 43.18) (xy 41.91 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3065,7 +3124,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 110.49) (xy 45.72 113.03)
+			(xy 53.34 54.61) (xy 53.34 57.15)
 		)
 		(stroke
 			(width 0)
@@ -3155,7 +3214,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 162.56) (xy 59.69 162.56)
+			(xy 45.72 153.67) (xy 35.56 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3175,7 +3234,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 101.6) (xy 57.15 101.6)
+			(xy 73.66 45.72) (xy 64.77 45.72)
 		)
 		(stroke
 			(width 0)
@@ -3255,7 +3314,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 184.15) (xy 80.01 179.07)
+			(xy 55.88 175.26) (xy 55.88 170.18)
 		)
 		(stroke
 			(width 0)
@@ -3285,7 +3344,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 182.88) (xy 77.47 179.07)
+			(xy 53.34 173.99) (xy 53.34 170.18)
 		)
 		(stroke
 			(width 0)
@@ -3295,7 +3354,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 99.06) (xy 57.15 99.06)
+			(xy 73.66 43.18) (xy 64.77 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3305,7 +3364,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 170.18) (xy 59.69 170.18)
+			(xy 45.72 161.29) (xy 35.56 161.29)
 		)
 		(stroke
 			(width 0)
@@ -3325,23 +3384,13 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 165.1) (xy 59.69 165.1)
+			(xy 45.72 156.21) (xy 35.56 156.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "dba145f5-4ea3-41ce-98ff-20294c74595f")
-	)
-	(wire
-		(pts
-			(xy 25.4 93.98) (xy 34.29 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "df60ba16-9842-4193-bf06-9799cb4e323a")
 	)
 	(wire
 		(pts
@@ -3395,7 +3444,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 167.64) (xy 59.69 167.64)
+			(xy 45.72 158.75) (xy 35.56 158.75)
 		)
 		(stroke
 			(width 0)
@@ -3435,23 +3484,13 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 96.52) (xy 34.29 96.52)
+			(xy 33.02 40.64) (xy 41.91 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f63127ad-bbc5-442b-aabb-837807a4f400")
-	)
-	(wire
-		(pts
-			(xy 102.87 92.71) (xy 111.76 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7199e4b-fe34-407a-9b6d-8ee610d77480")
 	)
 	(wire
 		(pts
@@ -3503,7 +3542,7 @@
 		)
 		(uuid "fc2b4eae-d062-4aca-b0bf-76fdb303e541")
 	)
-	(label "GPIO16"
+	(label "WIFI_ON"
 		(at 247.65 77.47 90)
 		(effects
 			(font
@@ -3513,7 +3552,7 @@
 		)
 		(uuid "0be05a2f-a4ad-41bd-bbc4-306e0b88e458")
 	)
-	(label "GPIO26"
+	(label "DISP_CLK"
 		(at 167.64 118.11 180)
 		(effects
 			(font
@@ -3523,8 +3562,8 @@
 		)
 		(uuid "0c03466b-2b91-4e8f-be14-8d96d06ae6e5")
 	)
-	(label "GPIO11"
-		(at 66.04 99.06 180)
+	(label "BTN_B"
+		(at 73.66 43.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3533,7 +3572,7 @@
 		)
 		(uuid "14c99197-85db-4e28-afbc-6530e608d236")
 	)
-	(label "GPIO22"
+	(label "DISP_DC"
 		(at 167.64 107.95 180)
 		(effects
 			(font
@@ -3543,7 +3582,7 @@
 		)
 		(uuid "19f83fd4-83ef-46d5-886f-0e843ee9c43b")
 	)
-	(label "GPIO3"
+	(label "AUDIO_DIN"
 		(at 102.87 97.79 0)
 		(effects
 			(font
@@ -3553,8 +3592,8 @@
 		)
 		(uuid "1c3dea41-307d-47fb-80aa-58107494ba85")
 	)
-	(label "GPIO22"
-		(at 59.69 162.56 0)
+	(label "AUDIO_DIN"
+		(at 35.56 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3563,7 +3602,7 @@
 		)
 		(uuid "242f8b58-22b4-4113-b123-68c24b73e330")
 	)
-	(label "GPIO9"
+	(label "WIFI_ON"
 		(at 102.87 113.03 0)
 		(effects
 			(font
@@ -3573,7 +3612,7 @@
 		)
 		(uuid "27e571f8-35fd-4e7a-ba66-3a07561178e3")
 	)
-	(label "GPIO10"
+	(label "BTN_Y"
 		(at 102.87 115.57 0)
 		(effects
 			(font
@@ -3583,7 +3622,7 @@
 		)
 		(uuid "2a6e0236-b532-4e6d-bd81-d41a27906d03")
 	)
-	(label "GPIO14"
+	(label "WIFI_CLK"
 		(at 198.12 34.29 0)
 		(effects
 			(font
@@ -3593,8 +3632,8 @@
 		)
 		(uuid "2eea752f-193f-4023-88ff-221f90bff646")
 	)
-	(label "GPIO3"
-		(at 25.4 104.14 0)
+	(label "BTN_RIGHT"
+		(at 33.02 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3613,8 +3652,8 @@
 		)
 		(uuid "30f29202-d808-474d-ba51-13a0cb7f2d04")
 	)
-	(label "GPIO8"
-		(at 66.04 106.68 180)
+	(label "BTN_X"
+		(at 73.66 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3623,7 +3662,7 @@
 		)
 		(uuid "31107a81-9903-4e36-8ee4-f31bd291a9a8")
 	)
-	(label "GPIO13"
+	(label "WIFI_CS"
 		(at 237.49 77.47 90)
 		(effects
 			(font
@@ -3632,16 +3671,6 @@
 			(justify left bottom)
 		)
 		(uuid "34904342-a47d-4589-b977-be9b35015842")
-	)
-	(label "GPIO1"
-		(at 102.87 92.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3a5bc014-8674-496a-9dab-7833a63a806b")
 	)
 	(label "DISP_DC"
 		(at 213.36 127 0)
@@ -3653,17 +3682,7 @@
 		)
 		(uuid "4247e2b7-2166-4284-8c6e-d8d3c4f35aa0")
 	)
-	(label "GPIO7"
-		(at 25.4 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "45df48ec-86c4-4982-8db9-225dfbf2e6f0")
-	)
-	(label "DISP_DIN"
+	(label "BTN_UP"
 		(at 167.64 100.33 180)
 		(effects
 			(font
@@ -3673,7 +3692,7 @@
 		)
 		(uuid "4c0385ad-7061-4abe-8185-6769872df492")
 	)
-	(label "GPIO11"
+	(label "BTN_X"
 		(at 102.87 118.11 0)
 		(effects
 			(font
@@ -3683,8 +3702,8 @@
 		)
 		(uuid "4c0de0eb-9fc6-46d2-8acc-13a45f65efde")
 	)
-	(label "GPIO12"
-		(at 66.04 96.52 180)
+	(label "BTN_SELECT"
+		(at 73.66 40.64 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3693,8 +3712,8 @@
 		)
 		(uuid "4f2f7185-2769-400c-9c5f-8f2110195c9f")
 	)
-	(label "GPIO10"
-		(at 66.04 101.6 180)
+	(label "BTN_A"
+		(at 73.66 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3703,8 +3722,8 @@
 		)
 		(uuid "5c2aad99-8f07-4eb4-bfb2-0810de8cb2cf")
 	)
-	(label "GPIO27"
-		(at 59.69 167.64 0)
+	(label "AUDIO_LRCLK"
+		(at 35.56 158.75 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3713,7 +3732,7 @@
 		)
 		(uuid "6d508ea8-d291-4848-8d07-eb8843e41756")
 	)
-	(label "GPIO13"
+	(label "WIFI_CS"
 		(at 102.87 123.19 0)
 		(effects
 			(font
@@ -3723,8 +3742,8 @@
 		)
 		(uuid "79200b06-f612-4d3e-8b1b-9141a086306a")
 	)
-	(label "GPIO26"
-		(at 59.69 165.1 0)
+	(label "AUDIO_BCLK"
+		(at 35.56 156.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3733,17 +3752,7 @@
 		)
 		(uuid "7d3facd0-f864-478f-82ef-7933c53c284c")
 	)
-	(label "GPIO0"
-		(at 102.87 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7f0a632e-59d2-4c57-9ed2-84533482a97b")
-	)
-	(label "GPIO28"
+	(label "DISP_CS"
 		(at 167.64 123.19 180)
 		(effects
 			(font
@@ -3753,8 +3762,8 @@
 		)
 		(uuid "7f2c521c-5bf9-461d-a3e2-533f6ddc34e1")
 	)
-	(label "GPIO2"
-		(at 25.4 106.68 0)
+	(label "BTN_LEFT"
+		(at 33.02 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3763,7 +3772,7 @@
 		)
 		(uuid "7fa82b74-fda8-46de-bb08-160b685d7b1f")
 	)
-	(label "DISP_CS"
+	(label "BTN_RIGHT"
 		(at 167.64 95.25 180)
 		(effects
 			(font
@@ -3773,7 +3782,7 @@
 		)
 		(uuid "82391b13-3e0f-4e18-ae99-ce3e733ed3fe")
 	)
-	(label "GPIO12"
+	(label "BTN_SELECT"
 		(at 102.87 120.65 0)
 		(effects
 			(font
@@ -3783,7 +3792,7 @@
 		)
 		(uuid "8bd7ee45-7629-4866-b3b0-443bbb89c100")
 	)
-	(label "DISP_RST"
+	(label "BTN_LEFT"
 		(at 167.64 102.87 180)
 		(effects
 			(font
@@ -3793,8 +3802,8 @@
 		)
 		(uuid "8cfca4db-fa44-4b6c-b4cd-2153d2949204")
 	)
-	(label "GPIO6"
-		(at 25.4 96.52 0)
+	(label "BTN_START"
+		(at 33.02 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3803,7 +3812,7 @@
 		)
 		(uuid "95de626b-ecb4-4edd-8a71-30ec1f02b45d")
 	)
-	(label "GPIO27"
+	(label "DISP_DIN"
 		(at 167.64 120.65 180)
 		(effects
 			(font
@@ -3813,7 +3822,7 @@
 		)
 		(uuid "9af5f099-2642-4535-977f-74f97860c3f0")
 	)
-	(label "GPIO8"
+	(label "BTN_B"
 		(at 102.87 110.49 0)
 		(effects
 			(font
@@ -3823,7 +3832,7 @@
 		)
 		(uuid "9ba5bdd4-63a5-4f39-92e7-9c3276ffd584")
 	)
-	(label "DISP_CLK"
+	(label "BTN_START"
 		(at 167.64 97.79 180)
 		(effects
 			(font
@@ -3833,7 +3842,7 @@
 		)
 		(uuid "9d88bad6-af22-496c-82ab-c7136474ecb8")
 	)
-	(label "GPIO15"
+	(label "WIFI_DIO"
 		(at 198.12 41.91 0)
 		(effects
 			(font
@@ -3843,7 +3852,7 @@
 		)
 		(uuid "9e60c857-74b9-477d-9120-3979252040d6")
 	)
-	(label "GPIO15"
+	(label "WIFI_DIO"
 		(at 102.87 128.27 0)
 		(effects
 			(font
@@ -3863,8 +3872,8 @@
 		)
 		(uuid "aaf6fcfa-5ca0-43de-8afe-43bd0596582e")
 	)
-	(label "GPIO9"
-		(at 66.04 104.14 180)
+	(label "BTN_Y"
+		(at 73.66 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3873,8 +3882,8 @@
 		)
 		(uuid "ae29aa0b-e456-46a4-8fa4-8ae6445f0b31")
 	)
-	(label "GPIO4"
-		(at 25.4 101.6 0)
+	(label "BTN_UP"
+		(at 33.02 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3883,7 +3892,7 @@
 		)
 		(uuid "b379b9db-e990-4450-8060-4ea087444c62")
 	)
-	(label "DISP_DC"
+	(label "DISP_RST"
 		(at 167.64 105.41 180)
 		(effects
 			(font
@@ -3893,7 +3902,7 @@
 		)
 		(uuid "b6c523f0-8a8c-4ce0-aeea-e597fa83faa9")
 	)
-	(label "GPIO4"
+	(label "AUDIO_BCLK"
 		(at 102.87 100.33 0)
 		(effects
 			(font
@@ -3903,7 +3912,7 @@
 		)
 		(uuid "b6ce89bc-5887-4e53-a338-fb7922f77eba")
 	)
-	(label "GPIO5"
+	(label "AUDIO_LRCLK"
 		(at 102.87 102.87 0)
 		(effects
 			(font
@@ -3913,7 +3922,7 @@
 		)
 		(uuid "b8065e87-7f12-41d1-ab31-06f94c7b52c3")
 	)
-	(label "GPIO14"
+	(label "WIFI_CLK"
 		(at 102.87 125.73 0)
 		(effects
 			(font
@@ -3922,16 +3931,6 @@
 			(justify left bottom)
 		)
 		(uuid "bc2dbde6-070d-47db-9d9c-aa63962a7f2d")
-	)
-	(label "GPIO2"
-		(at 102.87 95.25 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bfd80f1e-78b6-4e20-b4ff-e0689650d843")
 	)
 	(label "DISP_CLK"
 		(at 213.36 132.08 0)
@@ -3943,8 +3942,8 @@
 		)
 		(uuid "c4ef978e-0119-4661-bab4-c6acddfd38e7")
 	)
-	(label "GPIO28"
-		(at 59.69 170.18 0)
+	(label "AUDIO_MODE"
+		(at 35.56 161.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3953,7 +3952,7 @@
 		)
 		(uuid "dbc6bee3-d1ca-433a-8b7b-1252c516e421")
 	)
-	(label "GPIO7"
+	(label "BTN_A"
 		(at 102.87 107.95 0)
 		(effects
 			(font
@@ -3973,7 +3972,7 @@
 		)
 		(uuid "eb6e9c88-e4a5-41c7-8642-4ac6540c4366")
 	)
-	(label "GPIO16"
+	(label "BTN_DOWN"
 		(at 167.64 92.71 180)
 		(effects
 			(font
@@ -3983,7 +3982,7 @@
 		)
 		(uuid "eec11bd2-8cb1-4995-a0a6-e1d426f5a3b9")
 	)
-	(label "GPIO15"
+	(label "WIFI_DIO"
 		(at 240.03 77.47 90)
 		(effects
 			(font
@@ -3993,7 +3992,7 @@
 		)
 		(uuid "f031bd7e-40b5-49b0-b5a3-649bda68755a")
 	)
-	(label "GPIO6"
+	(label "AUDIO_MODE"
 		(at 102.87 105.41 0)
 		(effects
 			(font
@@ -4003,8 +4002,8 @@
 		)
 		(uuid "f556757b-a774-42a2-ba06-abd2c6f190c3")
 	)
-	(label "GPIO5"
-		(at 25.4 99.06 0)
+	(label "BTN_DOWN"
+		(at 33.02 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4014,7 +4013,7 @@
 		(uuid "fb006d0a-7ae8-4674-84ac-22670ebb70f3")
 	)
 	(symbol
-		(lib_id "MCU_Module:RaspberryPi_Pico")
+		(lib_id "MCU_Module:RaspberryPi_Pico_Debug")
 		(at 134.62 105.41 0)
 		(unit 1)
 		(body_style 1)
@@ -4047,7 +4046,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
+		(property "Footprint" "Module:RaspberryPi_Pico_SMD_HandSolder"
 			(at 134.62 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -4069,7 +4068,7 @@
 				)
 			)
 		)
-		(property "Description" "Versatile and inexpensive microcontroller module powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
+		(property "Description" "Versatile and inexpensive microcontroller module (with debug pins) powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
 			(at 134.62 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -4211,6 +4210,15 @@
 		(pin "36"
 			(uuid "ff8b6b87-886c-4e66-8ed1-91a10c2d624d")
 		)
+		(pin "D1"
+			(uuid "8a45f094-e7d9-483b-8459-7eff1cfa774b")
+		)
+		(pin "D3"
+			(uuid "0998950c-bcad-42af-8fed-a35284ecbc06")
+		)
+		(pin "D2"
+			(uuid "f0076d0b-b0fa-4841-84b6-072f74f82bc9")
+		)
 		(instances
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
@@ -4222,7 +4230,7 @@
 	)
 	(symbol
 		(lib_id "vgc-zero-symbols:AudioModule")
-		(at 81.28 176.53 0)
+		(at 57.15 167.64 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4233,7 +4241,7 @@
 		(fields_autoplaced yes)
 		(uuid "2790c811-d3d3-4024-9d4d-4d816c7ada6d")
 		(property "Reference" "U2"
-			(at 82.55 167.0049 0)
+			(at 58.42 158.1149 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4244,7 +4252,7 @@
 			)
 		)
 		(property "Value" "AUDIO_MODULE"
-			(at 82.55 169.5449 0)
+			(at 58.42 160.6549 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4255,7 +4263,7 @@
 			)
 		)
 		(property "Footprint" "vgc-zero-footprints:AudioModule"
-			(at 81.28 176.53 0)
+			(at 57.15 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4265,8 +4273,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 81.28 176.53 0)
+		(property "Datasheet" "https://github.com/chili-chip/chili-audio-module-hardware"
+			(at 57.15 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4277,7 +4285,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 81.28 176.53 0)
+			(at 57.15 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4316,7 +4324,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 45.72 113.03 0)
+		(at 53.34 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4327,7 +4335,7 @@
 		(fields_autoplaced yes)
 		(uuid "2bf993f7-850d-44de-8217-c4ed99c036a4")
 		(property "Reference" "#PWR03"
-			(at 45.72 119.38 0)
+			(at 53.34 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4338,7 +4346,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 45.72 118.11 0)
+			(at 53.34 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4348,7 +4356,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 113.03 0)
+			(at 53.34 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4359,7 +4367,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 113.03 0)
+			(at 53.34 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4370,7 +4378,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 113.03 0)
+			(at 53.34 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4550,7 +4558,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 82.55 184.15 270)
+		(at 58.42 175.26 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4561,7 +4569,7 @@
 		(fields_autoplaced yes)
 		(uuid "457efe78-c328-4839-b0a6-a48f1355730f")
 		(property "Reference" "#PWR06"
-			(at 78.74 184.15 0)
+			(at 54.61 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4572,7 +4580,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 86.36 184.1499 90)
+			(at 62.23 175.2599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4583,7 +4591,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 82.55 184.15 0)
+			(at 58.42 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4594,7 +4602,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 82.55 184.15 0)
+			(at 58.42 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4605,7 +4613,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 82.55 184.15 0)
+			(at 58.42 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4787,7 +4795,7 @@
 	(symbol
 		(lib_name "ButtonsModule_1")
 		(lib_id "vgc-zero-symbols:ButtonsModule")
-		(at 36.83 92.71 0)
+		(at 44.45 36.83 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -4798,7 +4806,7 @@
 		(dnp no)
 		(uuid "68f23ace-5301-4c3b-b68a-dde151253935")
 		(property "Reference" "U5"
-			(at 38.354 88.9 0)
+			(at 45.974 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4808,7 +4816,7 @@
 			)
 		)
 		(property "Value" "BUTTONS_MODULE"
-			(at 45.466 91.186 0)
+			(at 53.086 35.306 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4818,7 +4826,7 @@
 			)
 		)
 		(property "Footprint" "vgc-zero-footprints:ButtonsModule"
-			(at 36.83 92.71 0)
+			(at 44.45 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4829,7 +4837,7 @@
 			)
 		)
 		(property "Datasheet" "https://github.com/chili-chip/chili-buttons-module-hardware"
-			(at 36.83 92.71 0)
+			(at 44.45 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4840,7 +4848,7 @@
 			)
 		)
 		(property "Description" "chilichip buttons module v1.1.0: D-pad, A/B/X/Y, START/SELECT and ON/OFF, each switch to GND (use MCU pull-ups)"
-			(at 36.83 92.71 0)
+			(at 44.45 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4909,7 +4917,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 77.47 182.88 0)
+		(at 53.34 173.99 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4920,7 +4928,7 @@
 		(fields_autoplaced yes)
 		(uuid "74d1f59b-640d-4f05-8955-b4a79c81e7cc")
 		(property "Reference" "#PWR07"
-			(at 77.47 189.23 0)
+			(at 53.34 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4931,7 +4939,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 77.47 187.96 0)
+			(at 53.34 179.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4941,7 +4949,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 182.88 0)
+			(at 53.34 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4952,7 +4960,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 182.88 0)
+			(at 53.34 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4963,7 +4971,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 77.47 182.88 0)
+			(at 53.34 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
