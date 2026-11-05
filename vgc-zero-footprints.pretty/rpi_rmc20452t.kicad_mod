@@ -376,7 +376,7 @@
 		(uuid "0d318230-a0a1-470b-a2f4-9cf7cce85664")
 	)
 	(embedded_fonts no)
-	(model "../3d_models/rpi_rmc20452t.step"
+	(model "${KIPRJMOD}/3d-models/rpi_rmc20452t.step"
 		(offset
 			(xyz 0 0 0)
 		)

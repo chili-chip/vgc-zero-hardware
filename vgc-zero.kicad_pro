@@ -256,7 +256,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "v1.1.4"
+      "sch_revision": "v2.0.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -278,27 +278,7 @@
   "erc": {
     "erc_exclusions": [
       [
-        "duplicate_pins|2400300|698500|ebc212f7-ad1b-4987-9144-1715a439f873|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
         "footprint_filter|2425700|393700|8f37635c-8ab7-42cb-a6d3-c0ae5601ffb8|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "footprint_filter|2489200|419100|8f37635c-8ab7-42cb-a6d3-c0ae5601ffb8|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "footprint_filter|800100|279400|ef0246d9-23a1-421d-bbcd-42bb614d0d51|00000000-0000-0000-0000-000000000000|||",
-        "bug?"
-      ],
-      [
-        "power_pin_not_driven|1346200|520700|48712607-566f-4639-b64a-85d1b01c7ade|00000000-0000-0000-0000-000000000000|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|1625600|977900|ad460dce-6ea4-4753-8b00-fff9714b5aa3|00000000-0000-0000-0000-000000000000|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|/d6dba08b-49bf-412e-8449-ecb85e54b8e9|",
         ""
       ]
     ],
@@ -554,6 +534,25 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -561,7 +560,12 @@
     },
     "net_colors": {},
     "netclass_assignments": {},
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Power",
+        "pattern": "+3.3V"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -721,7 +725,7 @@
         "uuid": "d6dba08b-49bf-412e-8449-ecb85e54b8e9"
       }
     ],
-    "used_designators": "#PWR1-18,AUDIO1,BUTTONS1-2,DISP2,J1-2,R1-3,SW11",
+    "used_designators": "#PWR1-18,AUDIO1,BUTTONS1-2,DISP2,J1-2,R1-3,SW11,U6",
     "variants": []
   },
   "sheets": [

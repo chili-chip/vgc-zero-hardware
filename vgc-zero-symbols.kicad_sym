@@ -18,7 +18,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "AudioModule"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28,18 +28,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
+		(property "Footprint" "vgc-zero-footprints:AudioModule"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50,7 +39,18 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Datasheet" "https://github.com/chili-chip/chili-audio-module-hardware"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "chilichip audio module: MAX98357A I2S class D amplifier, castellated"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -232,7 +232,7 @@
 				)
 			)
 		)
-		(property "Description" "chilichip buttons module v1.1.0: D-pad, A/B/X/Y, START/SELECT and ON/OFF, each switch to GND (use MCU pull-ups)"
+		(property "Description" "chilichip buttons module: GBA-style D-pad, A/B, X/Y, Start/Select, castellated"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -359,10 +359,10 @@
 					)
 				)
 			)
-			(pin passive line
+			(pin no_connect line
 				(at -2.54 1.27 0)
 				(length 2.54)
-				(name "ON/OFF"
+				(name "NC"
 					(effects
 						(font
 							(size 1.27 1.27)

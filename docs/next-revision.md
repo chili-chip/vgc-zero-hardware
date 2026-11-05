@@ -1,5 +1,7 @@
 # Next revision plan
 
+> **Status:** implemented in board v2.0.0; see the [README](../README.md) for the board as built. Where it differs from this plan: the MCU is a Raspberry Pi Pico 2 soldered flat by its castellations, the audio chip is the MAX98357A ([chili-audio-module](https://github.com/chili-chip/chili-audio-module-hardware)), the buttons moved to a castellated [buttons module](https://github.com/chili-chip/chili-buttons-module-hardware), and the display sits on hardware SPI1 (GP26/GP27). The RTC and LED items were not carried into v2.0.0.
+
 Plan for the next VGC Zero board, decided 2026-10-21. The board keeps the Waveshare RP2350-Plus as the MCU and gains plug-in audio and WiFi modules. Tickets live in this repo's issues, under the "ChiliChip console launch" milestone.
 
 ## Summary
