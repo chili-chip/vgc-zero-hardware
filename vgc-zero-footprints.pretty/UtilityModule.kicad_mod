@@ -1,0 +1,322 @@
+(footprint "UtilityModule"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "chili-utility-module v2.0+ (16.4 x 14.8 mm), castellated edge pads soldered flat; SMD lands under the left (3V3/SDA/SCL/INT/GND/VBAT) edge. Origin = module bottom-left corner, module top view. https://github.com/chili-chip/chili-utility-module-hardware")
+	(tags "chilichip module castellated smd")
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "02414999-7635-471f-8194-bc01396f704a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63b8d095-d368-4173-8019-8c39f9c2fe2c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Reference" "UTIL"
+		(at 8.2 -9 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "5311f317-4576-43a6-bb4f-6b212549d693")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "UtilityModule"
+		(at 8.2 -7.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b102ea63-0af0-4687-9984-2569e6bd5cc6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 8.2 -6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b00fc1f3-a932-4d97-995d-f280ca656ed7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "dc715080-de58-47a5-aac6-95360f27d4a4")
+		(pts
+			(xy 0 0) (xy 16.4 0)
+		)
+		(height 2.5)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "16.4"
+			(at 8.2 1.35 0)
+			(layer "User.1")
+			(uuid "dc715080-de58-47a5-aac6-95360f27d4a4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "22d63fd6-9636-4859-b226-16a38ce583ea")
+		(pts
+			(xy 16.4 0) (xy 16.4 -14.8)
+		)
+		(height 2.5)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "14.8"
+			(at 17.75 -7.4 90)
+			(layer "User.1")
+			(uuid "22d63fd6-9636-4859-b226-16a38ce583ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(fp_line
+		(start 0 0)
+		(end 0 0.06)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a3618507-1d1b-4c18-87e4-7ef78bceca11")
+	)
+	(fp_line
+		(start 0 -2.06)
+		(end 0 -2.48)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7c9697c5-6a23-4b29-9ddd-63e46dc3c84f")
+	)
+	(fp_line
+		(start 0 -4.6)
+		(end 0 -5.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fd897014-ea47-4306-9d56-0ef508748df2")
+	)
+	(fp_line
+		(start 0 -7.14)
+		(end 0 -7.56)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c2d9e81b-8ae9-4127-b54a-7cc6e9193f09")
+	)
+	(fp_line
+		(start 0 -9.68)
+		(end 0 -10.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "da378851-8749-4d5d-b081-a19c0043ce8f")
+	)
+	(fp_line
+		(start 0 -12.22)
+		(end 0 -12.64)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "02ffffec-8526-473e-b91c-cb5460aba62c")
+	)
+	(fp_line
+		(start 0 -14.76)
+		(end 0 -14.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "63ac9fee-8a54-46b0-b6fc-f05b434b050d")
+	)
+	(fp_line
+		(start 0 0)
+		(end 16.4 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "52ef5398-3f3d-4a70-a6a8-c1997dc7d2db")
+	)
+	(fp_line
+		(start 16.4 0)
+		(end 16.4 -14.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e580e0c8-3951-42ee-af64-ba2c2aff6bee")
+	)
+	(fp_line
+		(start 0 -14.8)
+		(end 16.4 -14.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e3214426-bc95-43af-a3a1-30d4823404d3")
+	)
+	(fp_rect
+		(start -1.85 -15.05)
+		(end 16.65 0.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d4666883-ff54-4269-b678-a75a0d8d3849")
+	)
+	(fp_rect
+		(start 0 -14.8)
+		(end 16.4 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b85dd295-abe4-46af-a642-0b5e32f49ce1")
+	)
+	(pad "1" smd roundrect
+		(at -0.3 -1)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "14f012db-76d1-4345-a4a0-7b0418779bda")
+	)
+	(pad "2" smd roundrect
+		(at -0.3 -3.54)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "36beba82-b873-4876-b786-ee764a98c242")
+	)
+	(pad "3" smd roundrect
+		(at -0.3 -6.08)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "0e2e3dfa-b563-4262-af1d-ff2c9d4603e6")
+	)
+	(pad "4" smd roundrect
+		(at -0.3 -8.62)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "163d8750-674c-48b3-bb1f-642f7d8bb122")
+	)
+	(pad "5" smd roundrect
+		(at -0.3 -11.16)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "af0a5f8b-a402-47ed-ad89-dbfce867bd62")
+	)
+	(pad "6" smd roundrect
+		(at -0.3 -13.7)
+		(size 2.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "1929f28a-66a9-4fe6-b481-fbdaacd1ecee")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d-models/chili-utility-module-hardware.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
