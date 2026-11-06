@@ -22,6 +22,7 @@ Current revision: **v2.0.0**. The schematic (`vgc-zero.kicad_sch`) is the source
 | Display | Waveshare 1.5" RGB OLED (SSD1351, 128 × 128, SPI) on the front |
 | Buttons | [chili-buttons-module](https://github.com/chili-chip/chili-buttons-module-hardware): D-pad, A/B, X/Y, Start/Select, soldered flat on the front |
 | Audio | [chili-audio-module](https://github.com/chili-chip/chili-audio-module-hardware): MAX98357A I²S class D amplifier, soldered flat on the back |
+| Sensors | [chili-utility-module](https://github.com/chili-chip/chili-utility-module): 6-axis IMU, RTC with CR1220 backup, haptic motor, all on I²C |
 | Wireless | Raspberry Pi Radio Module 2 (RM2, CYW43439): Wi-Fi 4 and Bluetooth 5.2, on the back with its antenna at the bottom edge over a copper keep-out |
 | Power | USB on the Pico; the Pico's 3.3 V output supplies all modules |
 
@@ -34,6 +35,7 @@ Current revision: **v2.0.0**. The schematic (`vgc-zero.kicad_sch`) is the source
 | U3 | [Raspberry Pi Radio Module 2](https://www.raspberrypi.com/products/radio-module-2/) | back | `RF_Module:RMC20452T` |
 | U4 | [Waveshare 1.5inch RGB OLED Module](https://www.waveshare.com/wiki/1.5inch_RGB_OLED_Module) | front | 7-pin 2.54 mm header plus four mounting holes |
 | U5 | [chili-buttons-module](https://github.com/chili-chip/chili-buttons-module-hardware) v1.2+ | front | castellated, 50 × 39 mm |
+| U6 | [chili-utility-module](https://github.com/chili-chip/chili-utility-module) v1.0+ | | castellated, 30 × 32 mm; footprint and placement not done yet |
 | R2 | 470 Ω, axial | back | RM2 DO to the shared data line |
 | R3 | 10 kΩ, axial | back | RM2 nIRQ to the shared data line |
 
@@ -45,6 +47,9 @@ GPIOs were chosen so every trace runs as short and straight as possible to its m
 
 | GPIO | Pico pin | Signal | Notes |
 |------|----------|--------|-------|
+| GP0 | 1 | UTIL_SDA | I2C0 SDA; pull-up on the module |
+| GP1 | 2 | UTIL_SCL | I2C0 SCL; pull-up on the module |
+| GP2 | 4 | UTIL_INT | open-drain IMU/RTC interrupt; pull-up on the module |
 | GP3 | 5 | AUDIO_DIN | I²S data |
 | GP4 | 6 | AUDIO_BCLK | I²S bit clock |
 | GP5 | 7 | AUDIO_LRCLK | I²S word select (BCLK + 1, as the PIO I²S driver expects) |
@@ -69,7 +74,7 @@ GPIOs were chosen so every trace runs as short and straight as possible to its m
 | GP27 | 32 | DISP_DIN | SPI1 TX |
 | GP28 | 34 | DISP_CS | |
 
-GP0–GP2 are free (GP0/GP1 suit UART0 for debugging). Buttons short to GND when pressed and have no pull-ups on the module, so enable the RP2350's internal pull-ups.
+The utility module takes GP0/GP1, the default UART0 pins, so use USB serial for debug output. Its I²C addresses are 0x6A (IMU), 0x52 (RTC) and 0x5A (haptic driver). Buttons short to GND when pressed and have no pull-ups on the module, so enable the RP2350's internal pull-ups.
 
 ## Ordering the PCB from JLCPCB
 

@@ -2526,6 +2526,170 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "vgc-zero-symbols:UtilityModule"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "UTIL"
+				(at 3.302 1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "UtilityModule"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "vgc-zero-footprints:UtilityModule"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/chili-chip/chili-utility-module"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "chilichip utility module: LSM6DS3TR-C IMU, RV-3028-C7 RTC, DRV2605L haptic driver with ERM motor, on one I2C bus, castellated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "UtilityModule_1_1"
+				(rectangle
+					(start -8.89 13.97)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -1.27 -2.54 90)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 11.43 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 8.89 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at -11.43 6.35 0)
+					(length 2.54)
+					(name "INT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -3.81 -2.54 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "vgc-zero-symbols:SSD1351_OLED_128x128_WAVESHARE"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2757,10 +2921,6 @@
 		(uuid "1bde6fef-048e-4e41-b1e3-78c0b2e20165")
 	)
 	(no_connect
-		(at 111.76 92.71)
-		(uuid "28d186c1-19a6-491e-b836-09f895954715")
-	)
-	(no_connect
 		(at 157.48 113.03)
 		(uuid "38ababe7-fc9d-42fd-bd56-a42654e4e378")
 	)
@@ -2797,20 +2957,12 @@
 		(uuid "b343af33-350c-4398-b1a4-8408bb72f93b")
 	)
 	(no_connect
-		(at 111.76 90.17)
-		(uuid "faddee44-f7d8-44bf-82a8-83991462e888")
-	)
-	(no_connect
 		(at 111.76 74.93)
 		(uuid "fe6d6d23-6e69-4f99-aca1-de002d4e7f80")
 	)
 	(no_connect
 		(at 41.91 38.1)
 		(uuid "c3ce352a-ba2e-4125-bccf-8b3a9a496cd0")
-	)
-	(no_connect
-		(at 111.76 95.25)
-		(uuid "dbf16613-2200-44b0-a0bb-dd5cc0138285")
 	)
 	(wire
 		(pts
@@ -3541,6 +3693,156 @@
 			(type default)
 		)
 		(uuid "fc2b4eae-d062-4aca-b0bf-76fdb303e541")
+	)
+	(wire
+		(pts
+			(xy 102.87 90.17) (xy 111.76 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4351d12-7a14-43d6-892c-f0230c8462fb")
+	)
+	(label "UTIL_SDA"
+		(at 102.87 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3664bd3e-d7b3-46f1-a7ef-1df0ec12c89f")
+	)
+	(wire
+		(pts
+			(xy 45.72 114.3) (xy 35.56 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "814361ff-4d1a-4d8f-8b0c-80b4f29f39f7")
+	)
+	(label "UTIL_SDA"
+		(at 35.56 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c42fb76-f37a-4a79-a6ee-ec297a8a419c")
+	)
+	(wire
+		(pts
+			(xy 102.87 92.71) (xy 111.76 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c805fd1b-b09b-4157-a4b4-41d819839661")
+	)
+	(label "UTIL_SCL"
+		(at 102.87 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f662c2d1-732c-4660-b09a-8fad2bcc051d")
+	)
+	(wire
+		(pts
+			(xy 45.72 116.84) (xy 35.56 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "080fe31b-96d5-4450-b6b9-f257dea063d6")
+	)
+	(label "UTIL_SCL"
+		(at 35.56 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8bc27b08-2373-4cb4-b757-b5ebedb58aa8")
+	)
+	(wire
+		(pts
+			(xy 102.87 95.25) (xy 111.76 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3736de00-236d-40f6-8192-6ff5a28cc97b")
+	)
+	(label "UTIL_INT"
+		(at 102.87 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5833131-b0ba-432e-8285-625596c7648a")
+	)
+	(wire
+		(pts
+			(xy 45.72 119.38) (xy 35.56 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "218882a9-0157-412e-9731-c8b904706980")
+	)
+	(label "UTIL_INT"
+		(at 35.56 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b96f7f87-7a9b-422e-9287-be64348028c2")
+	)
+	(wire
+		(pts
+			(xy 53.34 132.08) (xy 53.34 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1614770b-f76e-48f2-b1cd-51940379a7c2")
+	)
+	(wire
+		(pts
+			(xy 55.88 133.35) (xy 55.88 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "838ced8e-9481-4b39-89e5-b77c18703265")
+	)
+	(wire
+		(pts
+			(xy 58.42 133.35) (xy 55.88 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6439f6ba-6916-4a94-938d-51e59af8831c")
 	)
 	(label "WIFI_ON"
 		(at 247.65 77.47 90)
@@ -6020,6 +6322,254 @@
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "vgc-zero-symbols:UtilityModule")
+		(at 57.15 125.73 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b6c1272-3934-411a-92ba-6d3977abbdaa")
+		(property "Reference" "U6"
+			(at 58.42 113.6649 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "UTILITY_MODULE"
+			(at 58.42 116.2049 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "vgc-zero-footprints:UtilityModule"
+			(at 57.15 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/chili-chip/chili-utility-module"
+			(at 57.15 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 57.15 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1fb037fc-0886-45a4-b8c3-c57ccbfd4c20")
+		)
+		(pin "2"
+			(uuid "d6df380a-9a38-40d2-8837-ef2858475493")
+		)
+		(pin "3"
+			(uuid "30e5b752-da07-40d6-aec3-63bac1e4b383")
+		)
+		(pin "4"
+			(uuid "5dae2eb2-489d-4b6e-bab0-7376e34ddca1")
+		)
+		(pin "5"
+			(uuid "1630825c-bbe1-4a3e-91a3-ef6be0181033")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 53.34 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8ea6f1c5-b71a-4a45-ae07-75e07c23bcab")
+		(property "Reference" "#PWR019"
+			(at 53.34 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 53.34 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b5a4c6b1-f3cd-4e00-90f9-1f05215d0f68")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 58.42 133.35 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2076479e-8e98-4233-9256-8495f3365c22")
+		(property "Reference" "#PWR020"
+			(at 54.61 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 62.23 133.35 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 58.42 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "765046a3-53f8-4689-adc8-b691fb65a769")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
