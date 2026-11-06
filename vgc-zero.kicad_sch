@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "CHILICHIP CONSOLE")
-		(date "2025-12-05")
-		(rev "v2.0.0")
+		(date "2026-11-06")
+		(rev "v3.0.0")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
@@ -532,7 +532,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MCU_Module:RaspberryPi_Pico_Debug"
+		(symbol "vgc-zero-symbols:RP2350-Plus"
 			(pin_names
 				(offset 0.762)
 			)
@@ -541,7 +541,7 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "A"
+			(property "Reference" "U"
 				(at -19.05 35.56 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -552,7 +552,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "RaspberryPi_Pico"
+			(property "Value" "RP2350-Plus"
 				(at 7.62 35.56 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -563,7 +563,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Module:RaspberryPi_Pico_SMD_HandSolder"
+			(property "Footprint" "vgc-zero-footprints:RP2350-Plus"
 				(at 0 -46.99 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -574,7 +574,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
+			(property "Datasheet" "https://www.waveshare.com/wiki/RP2350-Plus"
 				(at 0 -49.53 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -585,7 +585,7 @@
 					)
 				)
 			)
-			(property "Description" "Versatile and inexpensive microcontroller module (with debug pins) powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
+			(property "Description" "Waveshare RP2350-Plus: RP2350A, 4 or 16 MB flash, USB-C, castellated Pico-compatible pinout, onboard Li-ion charger (ETA6096, 1 A) with a PH1.25 battery header"
 				(at 0 -52.07 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -596,7 +596,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "RP2350A M33 RISC-V Hazard3 usb swd"
+			(property "ki_keywords" "RP2350A M33 RISC-V Hazard3 usb waveshare lipo"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -607,7 +607,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "RaspberryPi?Pico?SMD*"
+			(property "ki_fp_filters" "RP2350?Plus*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -618,7 +618,7 @@
 					)
 				)
 			)
-			(symbol "RaspberryPi_Pico_Debug_0_1"
+			(symbol "RP2350-Plus_0_1"
 				(rectangle
 					(start -19.05 34.29)
 					(end 19.05 -31.75)
@@ -691,7 +691,7 @@
 					)
 				)
 			)
-			(symbol "RaspberryPi_Pico_Debug_1_1"
+			(symbol "RP2350-Plus_1_1"
 				(pin bidirectional line
 					(at -22.86 15.24 0)
 					(length 3.81)
@@ -1562,61 +1562,6 @@
 						)
 					)
 					(alternate "VBUS_IN" power_in line)
-				)
-				(pin input line
-					(at -22.86 30.48 0)
-					(length 3.81)
-					(name "SWCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -35.56 90)
-					(length 3.81)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -22.86 27.94 0)
-					(length 3.81)
-					(name "SWDIO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
 				)
 			)
 			(embedded_fonts no)
@@ -2526,6 +2471,188 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "vgc-zero-symbols:UtilityModule"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "UTIL"
+				(at 3.302 1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "UtilityModule"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "vgc-zero-footprints:UtilityModule"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/chili-chip/chili-utility-module-hardware"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "chilichip utility module v2: LSM6DS3TR-C IMU, RV-3028-C7 RTC (VBAT backup), DRV2605L haptic driver with SMD ERM motor, on one I2C bus, castellated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "UtilityModule_1_1"
+				(rectangle
+					(start -8.89 13.97)
+					(end 5.08 0)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -1.27 -2.54 90)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 11.43 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 8.89 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at -11.43 6.35 0)
+					(length 2.54)
+					(name "INT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -3.81 -2.54 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 8.89 180)
+					(length 2.54)
+					(name "VBAT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "vgc-zero-symbols:SSD1351_OLED_128x128_WAVESHARE"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2739,6 +2866,345 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Battery_Cell"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "BT"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Battery_Cell"
+				(at 2.54 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 1.524 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 1.524 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Single-cell battery"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "DC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=+ 2=-"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "battery cell"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Battery_Cell_0_1"
+				(rectangle
+					(start -2.286 1.778)
+					(end 2.286 1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.524 1.016)
+					(end 1.524 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.048) (xy 1.778 3.048)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.556) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Battery_Cell_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 208.28 41.91)
@@ -2753,12 +3219,16 @@
 		(uuid "69c9b8ed-acc0-48a8-bc94-ec3f6312f042")
 	)
 	(no_connect
-		(at 234.95 55.88)
-		(uuid "1bde6fef-048e-4e41-b1e3-78c0b2e20165")
+		(at 182.88 71.12)
+		(uuid "9a508703-b7ee-4f24-b7b9-7caf4de1467f")
 	)
 	(no_connect
-		(at 111.76 92.71)
-		(uuid "28d186c1-19a6-491e-b836-09f895954715")
+		(at 182.88 78.74)
+		(uuid "6c753e78-639a-469d-871e-ec8a33735520")
+	)
+	(no_connect
+		(at 234.95 55.88)
+		(uuid "1bde6fef-048e-4e41-b1e3-78c0b2e20165")
 	)
 	(no_connect
 		(at 157.48 113.03)
@@ -2785,32 +3255,12 @@
 		(uuid "7fb0e6f6-43ad-4d12-868c-4c8e08e0f0d2")
 	)
 	(no_connect
-		(at 111.76 77.47)
-		(uuid "a22d337b-87ea-42c1-8904-3869520290fc")
-	)
-	(no_connect
-		(at 129.54 67.31)
-		(uuid "abeef5ee-c1c7-4310-84df-898bafdb5676")
-	)
-	(no_connect
 		(at 157.48 128.27)
 		(uuid "b343af33-350c-4398-b1a4-8408bb72f93b")
 	)
 	(no_connect
-		(at 111.76 90.17)
-		(uuid "faddee44-f7d8-44bf-82a8-83991462e888")
-	)
-	(no_connect
-		(at 111.76 74.93)
-		(uuid "fe6d6d23-6e69-4f99-aca1-de002d4e7f80")
-	)
-	(no_connect
 		(at 41.91 38.1)
 		(uuid "c3ce352a-ba2e-4125-bccf-8b3a9a496cd0")
-	)
-	(no_connect
-		(at 111.76 95.25)
-		(uuid "dbf16613-2200-44b0-a0bb-dd5cc0138285")
 	)
 	(wire
 		(pts
@@ -3542,6 +3992,217 @@
 		)
 		(uuid "fc2b4eae-d062-4aca-b0bf-76fdb303e541")
 	)
+	(wire
+		(pts
+			(xy 102.87 90.17) (xy 111.76 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4351d12-7a14-43d6-892c-f0230c8462fb")
+	)
+	(text "BT1 plugs into U1's onboard PH1.25 battery header\n(P3 on the RP2350-Plus); it isn't wired on this board.\nU1 charges it at 1 A (ETA6096, R13 = 160k), about 1.25C for\n800 mAh: swap R13 for ~200k to charge at ~0.8 A (1C).\nU1 feeds VSYS from it through a Schottky diode."
+		(exclude_from_sim no)
+		(at 170.18 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "34f17f6d-5012-48eb-8d80-c1e8b07b8fc9")
+	)
+	(wire
+		(pts
+			(xy 129.54 67.31) (xy 129.54 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd73f79f-928a-40fc-be6c-f6a140c3ca74")
+	)
+	(wire
+		(pts
+			(xy 129.54 64.77) (xy 129.54 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dac7eea0-b3c5-48d0-ba3a-c3c0d67750e2")
+	)
+	(label "VSYS"
+		(at 129.54 62.23 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f2096240-ded6-4856-9c2c-8ee7a0a99b1f")
+	)
+	(wire
+		(pts
+			(xy 64.77 116.84) (xy 72.39 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75fdcf02-3ba3-43d7-906f-6565cb8e40d9")
+	)
+	(label "VSYS"
+		(at 72.39 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "36a6b690-a04e-41c5-9915-7c65dd028d21")
+	)
+	(label "UTIL_SDA"
+		(at 102.87 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3664bd3e-d7b3-46f1-a7ef-1df0ec12c89f")
+	)
+	(wire
+		(pts
+			(xy 45.72 114.3) (xy 35.56 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "814361ff-4d1a-4d8f-8b0c-80b4f29f39f7")
+	)
+	(label "UTIL_SDA"
+		(at 35.56 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c42fb76-f37a-4a79-a6ee-ec297a8a419c")
+	)
+	(wire
+		(pts
+			(xy 102.87 92.71) (xy 111.76 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c805fd1b-b09b-4157-a4b4-41d819839661")
+	)
+	(label "UTIL_SCL"
+		(at 102.87 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f662c2d1-732c-4660-b09a-8fad2bcc051d")
+	)
+	(wire
+		(pts
+			(xy 45.72 116.84) (xy 35.56 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "080fe31b-96d5-4450-b6b9-f257dea063d6")
+	)
+	(label "UTIL_SCL"
+		(at 35.56 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8bc27b08-2373-4cb4-b757-b5ebedb58aa8")
+	)
+	(wire
+		(pts
+			(xy 102.87 95.25) (xy 111.76 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3736de00-236d-40f6-8192-6ff5a28cc97b")
+	)
+	(label "UTIL_INT"
+		(at 102.87 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5833131-b0ba-432e-8285-625596c7648a")
+	)
+	(wire
+		(pts
+			(xy 45.72 119.38) (xy 35.56 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "218882a9-0157-412e-9731-c8b904706980")
+	)
+	(label "UTIL_INT"
+		(at 35.56 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b96f7f87-7a9b-422e-9287-be64348028c2")
+	)
+	(wire
+		(pts
+			(xy 53.34 132.08) (xy 53.34 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1614770b-f76e-48f2-b1cd-51940379a7c2")
+	)
+	(wire
+		(pts
+			(xy 55.88 133.35) (xy 55.88 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "838ced8e-9481-4b39-89e5-b77c18703265")
+	)
+	(wire
+		(pts
+			(xy 58.42 133.35) (xy 55.88 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6439f6ba-6916-4a94-938d-51e59af8831c")
+	)
 	(label "WIFI_ON"
 		(at 247.65 77.47 90)
 		(effects
@@ -4013,7 +4674,7 @@
 		(uuid "fb006d0a-7ae8-4674-84ac-22670ebb70f3")
 	)
 	(symbol
-		(lib_id "MCU_Module:RaspberryPi_Pico_Debug")
+		(lib_id "vgc-zero-symbols:RP2350-Plus")
 		(at 134.62 105.41 0)
 		(unit 1)
 		(body_style 1)
@@ -4035,7 +4696,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "RaspberryPi_Pico_2"
+		(property "Value" "RP2350-Plus"
 			(at 136.7633 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4046,7 +4707,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:RaspberryPi_Pico_SMD_HandSolder"
+		(property "Footprint" "vgc-zero-footprints:RP2350-Plus"
 			(at 134.62 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -4057,7 +4718,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
+		(property "Datasheet" "https://www.waveshare.com/wiki/RP2350-Plus"
 			(at 134.62 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -4068,19 +4729,8 @@
 				)
 			)
 		)
-		(property "Description" "Versatile and inexpensive microcontroller module (with debug pins) powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
+		(property "Description" ""
 			(at 134.62 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 134.62 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4209,15 +4859,6 @@
 		)
 		(pin "36"
 			(uuid "ff8b6b87-886c-4e66-8ed1-91a10c2d624d")
-		)
-		(pin "D1"
-			(uuid "8a45f094-e7d9-483b-8459-7eff1cfa774b")
-		)
-		(pin "D3"
-			(uuid "0998950c-bcad-42af-8fed-a35284ecbc06")
-		)
-		(pin "D2"
-			(uuid "f0076d0b-b0fa-4841-84b6-072f74f82bc9")
 		)
 		(instances
 			(project "vgc-zero"
@@ -6020,6 +6661,414 @@
 			(project "vgc-zero"
 				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "vgc-zero-symbols:UtilityModule")
+		(at 57.15 125.73 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+				(uuid "5b6c1272-3934-411a-92ba-6d3977abbdaa")
+		(property "Reference" "U6"
+			(at 48.26 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "UTILITY_MODULE"
+			(at 48.26 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "vgc-zero-footprints:UtilityModule"
+			(at 57.15 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/chili-chip/chili-utility-module-hardware"
+			(at 57.15 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 57.15 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1fb037fc-0886-45a4-b8c3-c57ccbfd4c20")
+		)
+		(pin "2"
+			(uuid "d6df380a-9a38-40d2-8837-ef2858475493")
+		)
+		(pin "3"
+			(uuid "30e5b752-da07-40d6-aec3-63bac1e4b383")
+		)
+		(pin "4"
+			(uuid "5dae2eb2-489d-4b6e-bab0-7376e34ddca1")
+		)
+		(pin "5"
+			(uuid "1630825c-bbe1-4a3e-91a3-ef6be0181033")
+		)
+		(pin "6"
+			(uuid "6cba0735-3df1-4b40-a560-9712804709f1")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 53.34 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8ea6f1c5-b71a-4a45-ae07-75e07c23bcab")
+		(property "Reference" "#PWR019"
+			(at 53.34 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 53.34 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b5a4c6b1-f3cd-4e00-90f9-1f05215d0f68")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 58.42 133.35 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2076479e-8e98-4233-9256-8495f3365c22")
+		(property "Reference" "#PWR020"
+			(at 54.61 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 62.23 133.35 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 58.42 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "765046a3-53f8-4689-adc8-b691fb65a769")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 182.88 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "7dab6454-19fb-4807-bc6f-d6767a462cd8")
+		(property "Reference" "BT1"
+			(at 186.69 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LP802540 800mAh"
+			(at 186.69 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "vgc-zero-footprints:LiPo_LP802540"
+			(at 182.88 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1-cell LiPo pouch, 8.0 x 25 x 40 mm, ~800 mAh, with PCM and a PH1.25 2-pin plug"
+			(at 182.88 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "61f531a8-acba-4bd6-b55a-aa8bcbc8ace6")
+		)
+		(pin "2"
+			(uuid "4aff71eb-f64c-405f-a271-dfd559de63d4")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "BT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 129.54 64.77 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b73953b-827d-4858-b148-170bc9cf1721")
+		(property "Reference" "#FLG01"
+			(at 131.445 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 125.72999999999999 64.77 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 129.54 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "edd16b70-2231-4334-b3c4-2a324551e769")
+		)
+		(instances
+			(project "vgc-zero"
+				(path "/d6dba08b-49bf-412e-8449-ecb85e54b8e9"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
