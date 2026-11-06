@@ -76,7 +76,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "silk_edge_clearance|85690000|60150000|c58732cc-0102-4561-b756-b7924692a088|991a5609-c71a-4585-b8f5-ab2a15a4eef9",
+          "Display (U4) silkscreen outline crosses a USB-C leg hole of the RP2350-Plus (U1). The fab clips silkscreen at holes."
+        ]
+      ],
       "meta": {
         "version": 2
       },
