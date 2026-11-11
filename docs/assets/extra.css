@@ -1,0 +1,52 @@
+/* chilichip colours on top of Material's default theme */
+:root {
+  --md-primary-fg-color: #c62828;
+  --md-primary-fg-color--light: #e53935;
+  --md-primary-fg-color--dark: #8e0000;
+  --md-accent-fg-color: #ff6d00;
+  --md-accent-fg-color--transparent: rgba(255, 109, 0, 0.1);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #b71c1c;
+  --md-accent-fg-color: #ff9e40;
+  --md-typeset-a-color: #ff8a65;
+}
+
+/* board renders */
+.md-typeset img.render {
+  max-width: 100%;
+}
+
+/* two or three renders side by side, stacking on phones */
+.renders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: end;
+  margin: 1rem 0;
+}
+
+.renders figure {
+  margin: 0;
+}
+
+.renders img {
+  width: 100%;
+}
+
+/* black-on-white drawings (placement plots, schematics) stay readable in dark mode */
+.drawing {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+[data-md-color-scheme="slate"] .drawing {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* keep pin and part names on one line */
+.md-typeset table:not([class]) code {
+  white-space: nowrap;
+}
