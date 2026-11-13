@@ -2,6 +2,8 @@
 
 KiCad 10 project for the main board of [chilichip](https://chilichip.eu)'s open hardware keychain game console, the **VGC Zero**. A Waveshare RP2350-Plus runs the console and charges its LiPo; the display, buttons, audio and Wi-Fi/Bluetooth are modules that solder or plug onto this board. Firmware and games are built with the [chili-chip 32blit SDK](https://github.com/chili-chip/32blit-sdk) (board `chilichip_vgc`).
 
+**Documentation: [hardware.chilichip.eu](https://hardware.chilichip.eu)** (specifications, pin map, modules, build guide). Source in [`docs/`](docs/).
+
 Current revision: **v3.0.0**. The schematic (`vgc-zero.kicad_sch`) is the source of truth for everything below.
 
 <p align="center">
@@ -106,9 +108,11 @@ To build the files from a local checkout instead, run `scripts/export-jlcpcb.sh`
 | `3d-models/` | STEP models of the modules (display, audio, buttons, utility, RM2), the RP2350-Plus (Waveshare's model, gzipped as `.stpZ`) and the LiPo envelope |
 | `vgc-zero.glb` | 3D export of the assembled board |
 | `scripts/export-jlcpcb.sh` | Builds the gerber zip and BOM |
-| `scripts/render-images.sh` | Regenerates the renders in `docs/images/` and `vgc-zero.glb` |
+| `scripts/render-images.sh` | Regenerates the renders, placement drawings and schematic in `docs/`, and `vgc-zero.glb` |
+| `docs/`, `mkdocs.yml` | Documentation site ([hardware.chilichip.eu](https://hardware.chilichip.eu)) |
 | `docs/next-revision.md` | The plan this revision implemented |
 | `.github/workflows/main.yml` | CI and release workflow |
+| `.github/workflows/docs.yml` | Builds the docs site and deploys it to Cloudflare Pages |
 
 CI runs ERC, DRC and the JLCPCB export on every push and pull request. Pushing a `v*` tag publishes a GitHub release with the schematic PDF, a PCB image, Gerbers and the JLCPCB files.
 
