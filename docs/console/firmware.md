@@ -2,7 +2,7 @@
 
 The console runs **ChiliChip OS**, built from the [console SDK](https://sdk.chilichip.eu) (chili-chip's fork of the 32blit SDK) for the board `chilichip_vgc`. Games are 32blit `.blit` files. Games made in the [creator](https://creator.chilichip.eu) run through a player app on the console.
 
-This page lists what the hardware needs from the firmware, and where the firmware does not match main board v3.0.0 yet.
+This page lists what the hardware needs from the firmware, and what the firmware does today.
 
 ## Software stack
 
@@ -33,21 +33,21 @@ flowchart TB
 |---|---|---|
 | Display | SSD1351 over SPI, 20 MHz | Yes: `dbi_ssd1351` |
 | Buttons | GPIO with internal pull-ups, active low | Yes: `input gpio` |
-| Sound | I²S over PIO, plus AUDIO_MODE high to enable the amplifier | Driver exists (`audio i2s`), not used by `chilichip_vgc` yet |
+| Sound | I²S over PIO, plus AUDIO_MODE high to enable the amplifier | Yes: `audio i2s` on PIO1 ([32blit-sdk #109](https://github.com/chili-chip/32blit-sdk/pull/109)) |
 | Battery level | ADC on GP29, divider 3, +300 mV | Yes |
-| IMU | LSM6DS3TR-C on I2C0, INT1 set to open drain | No. `tilt` reads zero |
-| RTC | RV-3028-C7 on I2C0, backup switchover on (`BSM = 11`) | No |
-| Haptics | DRV2605L on I2C0, ERM mode, auto-calibration | No |
+| IMU | LSM6DS3TR-C on I2C0, INT1 set to open drain | Detected at start-up, no driver. `tilt` reads zero |
+| RTC | RV-3028-C7 on I2C0, backup switchover on (`BSM = 11`) | Detected at start-up, no driver |
+| Haptics | DRV2605L on I2C0, ERM mode, auto-calibration | Detected at start-up, no driver |
 | Wi-Fi and Bluetooth | `cyw43` on PIO, pins GP9/GP13/GP14/GP15 | No, tracked in [32blit-sdk #64](https://github.com/chili-chip/32blit-sdk/issues/64) |
-| Power off | Sleep every module, then RP2350 dormant | No |
+| Power off | Sleep every module, then RP2350 dormant | Yes: hold Start 2 s to sleep, 1 s to wake ([sleep](https://sdk.chilichip.eu/console/sleep/)) |
 
 The [utility module](../modules/utility.md#firmware-setup) page lists the register settings the IMU, RTC and haptic driver need.
 
 ## Pin map differences
 
-The `chilichip_vgc` board files still describe **board v1.1.4**. Main board v3.0.0 moved almost every signal. Firmware for v3.0.0 needs these changes:
+`chilichip_vgc` describes **board v3.0.0** ([32blit-sdk #109](https://github.com/chili-chip/32blit-sdk/pull/109)). `chilichip_vgc_tft` is the TFT version, and older boards build with `chilichip_vgc_v1`. Main board v3.0.0 moved almost every signal:
 
-| Signal | v1.1.4 (firmware today) | v3.0.0 (this board) |
+| Signal | v1.1.4 (`chilichip_vgc_v1`) | v3.0.0 (`chilichip_vgc`) |
 |---|---|---|
 | Display SCK / MOSI | GP18 / GP19 (SPI0) | GP26 / GP27 (SPI1) |
 | Display CS / DC / RST | GP17 / GP21 / GP20 | GP28 / GP22 / GP21 |
@@ -60,15 +60,15 @@ The `chilichip_vgc` board files still describe **board v1.1.4**. Main board v3.0
 | Default UART | UART0 on GP0 / GP1 | Taken by I²C; use USB serial |
 | BOOTSEL | Hold X while switching on | BOOT button on the RP2350-Plus |
 
-Both boards can be supported side by side with two board names. Tracked in [32blit-sdk #63](https://github.com/chili-chip/32blit-sdk/issues/63).
+The SDK's [Boards and pins](https://sdk.chilichip.eu/console/boards/) page has the firmware settings for each pin.
 
 ## Buttons
 
-32blit games know the buttons D-pad, A, B, X, Y, MENU and HOME. ChiliChip OS uses HOME for its system menu. Main board v3.0.0 has Start and Select instead of MENU and HOME, so the firmware must map them. The mapping is not decided yet.
+32blit games know the buttons D-pad, A, B, X, Y, MENU and HOME. ChiliChip OS uses HOME for its system menu. Main board v3.0.0 has Start and Select instead, mapped like this:
 
-| v3.0.0 button | Could map to | Effect |
+| v3.0.0 button | Is | Effect |
 |---|---|---|
-| Start | MENU | Games keep their pause menu on MENU |
+| Start | MENU | Games keep their pause menu on MENU. Hold 2 s to sleep, 1 s to wake. |
 | Select | HOME | Short press opens the system menu, hold quits to home |
 
 ## Platform and creator
@@ -79,4 +79,4 @@ The hardware does not change how games get onto the console:
 - **Platform:** games bought on [Chili Platform](https://platform.chilichip.eu) download as `.blit` files and go on over USB. Downloading over Wi-Fi needs the radio driver ([32blit-sdk #65](https://github.com/chili-chip/32blit-sdk/issues/65)).
 - **Creator games** run in the Bitsy player (citsy-32blit) and the Chili Beat player, which ship in the factory image.
 
-A game that uses only the screen, buttons and sound runs the same on v1.1.4 and v3.0.0 once the board files are updated. Games that want tilt, the clock or rumble need the new drivers first.
+A game that uses only the screen, buttons and sound runs the same on v1.1.4 and v3.0.0. Games that want tilt, the clock or rumble need the new drivers first.
