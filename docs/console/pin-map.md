@@ -73,4 +73,4 @@ GPIOs inside the RP2350-Plus, not on the header:
 
 ## Firmware board file
 
-The pin map above has to match the `chilichip_vgc` board files in the console SDK. Today those files still describe board v1.1.4. The [firmware page](firmware.md#pin-map-differences) lists the differences.
+The pin map above matches the `chilichip_vgc` board files in the console SDK ([32blit-sdk #109](https://github.com/chili-chip/32blit-sdk/pull/109)). The [firmware page](firmware.md#pin-map-differences) lists the differences from board v1.1.4.
