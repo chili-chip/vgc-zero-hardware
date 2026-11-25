@@ -78,7 +78,7 @@ The current board. Everything on this site describes it.
 
 ### Next main board: display module
 
-The next main board drops the Waveshare OLED and its 7-pin header. It takes a chilichip [display module](modules/display.md#display-modules) instead: OLED or TFT, same outline and pads, so either one fits ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)).
+The next main board drops the Waveshare OLED and its 7-pin header. It takes a chilichip [display module](modules/display.md) instead: OLED or TFT, same outline and pads, so either one fits ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)).
 
 <div class="renders" markdown>
 <figure markdown>
