@@ -1,18 +1,18 @@
 # Display
 
-The console comes in two versions: **OLED** and **TFT** ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). The screen is swappable: both screens plug into the same 7-pin header and use the same GPIOs.
+The console comes in two versions: **OLED** and **TFT** ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). Both use a chilichip display module with the same outline and pads, so the screen is swappable. Board v3.0.0 still uses the Waveshare OLED module.
 
-| | OLED version | TFT version |
-|---|---|---|
-| Screen | [Waveshare 1.5inch RGB OLED Module](https://www.waveshare.com/wiki/1.5inch_RGB_OLED_Module) | 1.44" TFT on a chilichip carrier board (in design) |
-| Controller | SSD1351 | ST7735S |
-| Resolution | 128 × 128 | 128 × 128 |
-| Light | Self-lit pixels | LED backlight |
-| Connector | 7-pin 2.54 mm header | Same header, same pin order |
-| Size and holes | 44.5 × 37 mm, four holes | Same as the OLED |
-| Status | Used on v3.0.0 | Panel not picked yet |
+| | v3.0.0 (today) | OLED module (next board) | TFT module (next board) |
+|---|---|---|---|
+| Screen | [Waveshare 1.5" RGB OLED Module](https://www.waveshare.com/wiki/1.5inch_RGB_OLED_Module) | 1.5" OLED panel, EastRising ER-OLED015-1C | 1.44" TFT panel, EastRising ER-TFT1.44-3 |
+| Controller | SSD1351 | SSD1351 | ST7735S |
+| Resolution | 128 × 128 | 128 × 128 | 128 × 128 |
+| Light | Self-lit pixels | Self-lit pixels | LED backlight |
+| Connection | 7-pin 2.54 mm header | 8 castellated pads | 8 castellated pads |
+| Size | 44.5 × 37 mm, four holes | 40 × 37 mm, sits in a hole in the main board | Same as the OLED module |
+| Design files | Waveshare | [chili-display-module-hardware](https://github.com/chili-chip/chili-display-module-hardware) | Same repo |
 
-The rest of this page describes the OLED module. The [TFT version](#tft-version) section covers what is different.
+The sections below up to [Display modules](#display-modules) describe the Waveshare module on board v3.0.0.
 
 The OLED sits on the front of the console, on a 7-pin 2.54 mm header and four standoffs.
 
@@ -50,38 +50,59 @@ The panel has no TE (tearing effect) pin on this module, so the firmware cannot 
 
 An OLED has no backlight. Brightness is the SSD1351's contrast setting, which the firmware sets over SPI. Black pixels are off and draw no power, so dark games use less battery.
 
-## TFT version
+## Display modules
 
-The TFT version uses a 1.44" 128 × 128 panel with an ST7735S controller. It saves about €11–12 per console ([chili-business #60](https://github.com/chili-chip/chili-business/issues/60)). Games don't change, because the resolution is the same.
+From the next main board on, the screen is a chilichip display module ([chili-display-module-hardware](https://github.com/chili-chip/chili-display-module-hardware)). There are two: OLED and TFT. The TFT version saves about €11–12 per console ([chili-business #60](https://github.com/chili-chip/chili-business/issues/60)). Games don't change, because the resolution is the same.
 
-### Carrier board
+### How it sits on the main board
 
-The bare panel has a thin flex cable (FPC), so it sits on a small assembled carrier board. The carrier copies the Waveshare module:
+The main board has a 35 × 39 mm hole under the module. The module rests on two 2.5 mm ledges, left and right, and is soldered by 8 castellated pads. Its parts (FPC connector, passives, boost) are on the bottom and sit inside the hole. This saves the height of a pin header and standoffs.
 
-- the same 7-pin header, at the same place and in the same pin order;
-- the same 44.5 × 37 mm outline and four mounting holes;
-- the panel's visible area centred where the OLED's is, so the shell fits both.
+```
+      module 40 mm
+ +----+------------------+----+
+ |pad |                  | pad|   panel on top
+ |pad |   hole in the    | pad|
+ |pad |   main board     | pad|   module parts hang into the hole
+ |pad |                  | pad|
+ +----+------------------+----+
+  2.5 mm ledge      2.5 mm ledge
+```
 
-The main board doesn't change. To swap screens, unplug one and plug in the other.
+The main board footprint (pads and cut-out) is `ChiliDisplayModule_Host` in the module repo.
+
+### Pads
+
+Same five signals and GPIOs as the Waveshare module, so the firmware pin map doesn't change.
+
+| Pad | Edge | Net | RP2350 GPIO |
+|---|---|---|---|
+| 1 | Left | 3V3 | |
+| 2 | Left | GND | |
+| 3 | Left | `DISP_DIN` | GP27 (SPI1 TX) |
+| 4 | Left | `DISP_CLK` | GP26 (SPI1 SCK) |
+| 5 | Right | `DISP_CS` | GP28 |
+| 6 | Right | `DISP_DC` | GP22 |
+| 7 | Right | `DISP_RST` | GP21 |
+| 8 | Right | GND | |
+
+### Power follows `DISP_RST`
+
+All 26 GPIOs are used, so each module uses the reset line as its on/off switch:
+
+| `DISP_RST` | TFT module | OLED module |
+|---|---|---|
+| High (running) | Backlight on | 13 V panel supply on |
+| Low (reset, sleep) | Backlight off | 13 V supply off |
+
+In sleep mode the firmware holds `DISP_RST` low, so the module draws almost nothing ([32blit-sdk #97](https://github.com/chili-chip/32blit-sdk/issues/97)). The display is re-initialised on wake anyway. There is no brightness control on the TFT module.
 
 ```mermaid
 flowchart LR
-    MCU[RP2350-Plus] -- "CLK, DIN, CS, DC, RST" --> H[7-pin header]
-    H --> O[OLED module<br/>SSD1351]
-    H -.-> C[TFT carrier<br/>ST7735S]
-    C -- "RST high" --> BL[Backlight on]
+    MCU[RP2350-Plus] -- "CLK, DIN, CS, DC, RST" --> P[8 castellated pads]
+    P --> O[OLED module<br/>SSD1351 + 13 V boost]
+    P -.-> T[TFT module<br/>ST7735S + backlight switch]
 ```
-
-### Backlight
-
-All 26 GPIOs are used, so there is no pin for the backlight. A transistor on the carrier switches it from `DISP_RST`:
-
-| `DISP_RST` | Panel | Backlight |
-|---|---|---|
-| High | Running | On |
-| Low | Held in reset | Off |
-
-In sleep mode the firmware holds `DISP_RST` low, so the backlight draws nothing ([32blit-sdk #97](https://github.com/chili-chip/32blit-sdk/issues/97)). The display is re-initialised on wake anyway. There is no brightness control on the TFT version.
 
 ### Which screen is fitted
 
@@ -93,9 +114,10 @@ One firmware image drives both screens. At boot the loader asks the panel for it
 |---|---|
 | Breadboard prototype | 1.44" ST7735S TFT |
 | v1.1.4 | Waveshare 1.5" OLED on a 7-pin JST cable |
-| v2.0.0 and later | Same module, on a 2.54 mm pin header ([#21](https://github.com/chili-chip/vgc-zero-hardware/issues/21)) |
+| v2.0.0, v3.0.0 | Same module, on a 2.54 mm pin header ([#21](https://github.com/chili-chip/vgc-zero-hardware/issues/21)) |
+| Next board | chilichip OLED or TFT module, castellated, in a hole in the main board ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
 
-A switch from the OLED to a TFT IPS panel was dropped in 2026-10. On 2026-11-13 the TFT came back as a second, cheaper version next to the OLED ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). A cheaper bare SSD1351 panel is planned only for a future fully assembled board ([chilichip-console-hardware #16](https://github.com/chili-chip/chilichip-console-hardware/issues/16)).
+A switch from the OLED to a TFT IPS panel was dropped in 2026-10. On 2026-11-13 the TFT came back as a second, cheaper version next to the OLED ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). On 2026-11-25 both moved to chilichip castellated display modules that sit in a hole in the main board. The OLED module uses a bare SSD1351 panel, the idea first planned for a fully assembled board ([chilichip-console-hardware #16](https://github.com/chili-chip/chilichip-console-hardware/issues/16)).
 
 ## Footprints
 
