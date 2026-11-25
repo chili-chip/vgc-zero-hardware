@@ -9,7 +9,7 @@ The console comes in two versions: **OLED** and **TFT** ([#41](https://github.co
 | Resolution | 128 × 128 | 128 × 128 | 128 × 128 |
 | Light | Self-lit pixels | Self-lit pixels | LED backlight |
 | Connection | 7-pin 2.54 mm header | 8 castellated pads | 8 castellated pads |
-| Size | 44.5 × 37 mm, four holes | 40 × 37 mm, sits in a hole in the main board | Same as the OLED module |
+| Size | 44.5 × 37 mm, four holes | 28 × 22 mm, sits in a hole in the main board | Same as the OLED module |
 | Design files | Waveshare | [chili-display-module-hardware](https://github.com/chili-chip/chili-display-module-hardware) | Same repo |
 
 The sections below up to [Display modules](#display-modules) describe the Waveshare module on board v3.0.0.
@@ -56,12 +56,14 @@ From the next main board on, the screen is a chilichip display module ([chili-di
 
 ### How it sits on the main board
 
-The main board has a 35 × 39 mm hole under the module. The module rests on two 2.5 mm ledges, left and right, and is soldered by 8 castellated pads. Its parts (FPC connector, passives, boost) are on the bottom and sit inside the hole. This saves the height of a pin header and standoffs.
+The panel is not on the module. It is glued or screwed to the console frame, and its flex tail wraps round the module's bottom edge into the FPC connector. The module only holds the connector and the power parts.
+
+The main board has a 23 × 24 mm hole under the module. The module (28 × 22 mm) rests on two 2.5 mm ledges, left and right, and is soldered by 8 castellated pads. Its parts (FPC connector, passives, boost) are on the bottom and sit inside the hole. This saves the height of a pin header and standoffs.
 
 ```
-      module 40 mm
+      module 28 mm
  +----+------------------+----+
- |pad |                  | pad|   panel on top
+ |pad |                  | pad|   panel above, on the frame
  |pad |   hole in the    | pad|
  |pad |   main board     | pad|   module parts hang into the hole
  |pad |                  | pad|
