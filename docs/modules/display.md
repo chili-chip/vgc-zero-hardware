@@ -9,7 +9,7 @@ The console comes in two versions: **OLED** and **TFT** ([#41](https://github.co
 | Resolution | 128 × 128 | 128 × 128 | 128 × 128 |
 | Light | Self-lit pixels | Self-lit pixels | LED backlight |
 | Connection | 7-pin 2.54 mm header | 8 castellated pads | 8 castellated pads |
-| Size | 44.5 × 37 mm, four holes | 28 × 22 mm, sits in a hole in the main board | Same as the OLED module |
+| Size | 44.5 × 37 mm, four holes | 28 × 22 mm, lies flat on the main board | Same as the OLED module |
 | Design files | Waveshare | [chili-display-module-hardware](https://github.com/chili-chip/chili-display-module-hardware) | Same repo |
 
 The sections below up to [Display modules](#display-modules) describe the Waveshare module on board v3.0.0.
@@ -56,22 +56,23 @@ From the next main board on, the screen is a chilichip display module ([chili-di
 
 ### How it sits on the main board
 
-The panel is not on the module. It is glued or screwed to the console frame, and its flex tail wraps round the module's bottom edge into the FPC connector. The module only holds the connector and the power parts.
+The panel is not on the module. It is glued or screwed to the console frame, and its flex tail plugs into the FPC connector at the module's bottom edge. The module only holds the connector and the power parts.
 
-The main board has a 23 × 24 mm hole under the module. The module (28 × 22 mm) rests on two 2.5 mm ledges, left and right, and is soldered by 8 castellated pads. Its parts (FPC connector, passives, boost) are on the bottom and sit inside the hole. This saves the height of a pin header and standoffs.
+All module parts (FPC connector, passives, boost) are on its top side, so its bottom is flat. The module (28 × 22 mm) lies flat on the main board and is hand soldered by 8 castellated pads, 4 on the left edge and 4 on the right, like a Raspberry Pi Pico. It stands 3.6 mm above the main board: 1.6 mm board plus the 2.0 mm FPC connector.
 
 ```
-      module 28 mm
- +----+------------------+----+
- |pad |                  | pad|   panel above, on the frame
- |pad |   hole in the    | pad|
- |pad |   main board     | pad|   module parts hang into the hole
- |pad |                  | pad|
- +----+------------------+----+
-  2.5 mm ledge      2.5 mm ledge
+        module 28 mm
+ +---------------------------+
+ |  parts on top             |   panel above, on the frame
+pad                         pad
+pad   flat bottom on the    pad   pads soldered by hand
+pad   main board            pad   to the main board
+pad                         pad
+ +-------------[J2]----------+
+               FPC
 ```
 
-The main board footprint (pads and cut-out) is `ChiliDisplayModule_Host` in the module repo.
+Keep parts and bare copper out from under the module. Tracks and tented vias are fine. The main board footprint is `ChiliDisplayModule_Host` in the module repo.
 
 ### Pads
 
@@ -117,9 +118,9 @@ One firmware image drives both screens. At boot the loader asks the panel for it
 | Breadboard prototype | 1.44" ST7735S TFT |
 | v1.1.4 | Waveshare 1.5" OLED on a 7-pin JST cable |
 | v2.0.0, v3.0.0 | Same module, on a 2.54 mm pin header ([#21](https://github.com/chili-chip/vgc-zero-hardware/issues/21)) |
-| Next board | chilichip OLED or TFT module, castellated, in a hole in the main board ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
+| Next board | chilichip OLED or TFT module, castellated, flat on the main board ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
 
-A switch from the OLED to a TFT IPS panel was dropped in 2026-10. On 2026-11-13 the TFT came back as a second, cheaper version next to the OLED ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). On 2026-11-25 both moved to chilichip castellated display modules that sit in a hole in the main board. The OLED module uses a bare SSD1351 panel, the idea first planned for a fully assembled board ([chilichip-console-hardware #16](https://github.com/chili-chip/chilichip-console-hardware/issues/16)).
+A switch from the OLED to a TFT IPS panel was dropped in 2026-10. On 2026-11-13 the TFT came back as a second, cheaper version next to the OLED ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). On 2026-11-25 both moved to chilichip castellated display modules soldered flat on the main board. The OLED module uses a bare SSD1351 panel, the idea first planned for a fully assembled board ([chilichip-console-hardware #16](https://github.com/chili-chip/chilichip-console-hardware/issues/16)).
 
 ## Footprints
 
