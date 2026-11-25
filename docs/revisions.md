@@ -74,46 +74,70 @@ The current board. Everything on this site describes it.
 | Single fully assembled board: RP2350 on the main board, all modules merged, bare SSD1351 panel | [chilichip-console-hardware](https://github.com/chili-chip/chilichip-console-hardware) | Planning. Starts from Raspberry Pi's RP2350A minimal design. Deferred until after launch ([32blit-sdk #63](https://github.com/chili-chip/32blit-sdk/issues/63)). Display plan in [#16](https://github.com/chili-chip/chilichip-console-hardware/issues/16) |
 | Custom silicone keypad | [vgc-zero-hardware #33](https://github.com/chili-chip/vgc-zero-hardware/issues/33) | Prototyping with GBA pads |
 | Shell | [vgc-zero-shell](https://github.com/chili-chip/vgc-zero-shell) | Shell 0v1 (3MF), made for the older boards |
-| Main board with the chilichip display module (OLED or TFT) | This repository, `master` | Placed and routed, ERC and DRC clean. See [below](#next-main-board-display-module). Not fabricated yet ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
+| Main board with the chilichip display module (OLED or TFT), 50 × 83.9 mm | This repository, `master` | Placed and routed, ERC and DRC clean. See [below](#next-main-board-display-module-and-smaller-outline). Not fabricated yet ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
 
-### Next main board: display module
+### Next main board: display module and smaller outline
 
-The next main board drops the Waveshare OLED and its 7-pin header. It takes a chilichip [display module](modules/display.md) instead: OLED or TFT, same outline and pads, so either one fits ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)).
+The next main board drops the Waveshare OLED and its 7-pin header. It takes a chilichip [display module](modules/display.md) instead: OLED or TFT, same outline and pads, so either one fits ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). With the big display module gone, the board is rearranged and shrinks from 50 × 100 mm to **50 × 83.9 mm**.
 
 <div class="renders" markdown>
 <figure markdown>
-![Next main board with the OLED display module, 3D render](images/next/iso.png){ .render loading=lazy }
-<figcaption>Next main board, OLED module fitted (work in progress)</figcaption>
+![Next main board, front, 3D render](images/next/iso.png){ .render loading=lazy }
+<figcaption>Front: display module and buttons module (work in progress)</figcaption>
 </figure>
 <figure markdown>
-![Display area of the next main board, top view](images/next/display-area.png){ .render loading=lazy }
-<figcaption>Display area: U4 module, H1 to H4 frame holes</figcaption>
+![Next main board, back, 3D render](images/next/iso-bottom.png){ .render loading=lazy }
+<figcaption>Back: radio top right, audio and utility down the right, battery along the bottom</figcaption>
 </figure>
 </div>
 
+<div class="renders" markdown>
+<figure markdown>
+![Next main board, front placement drawing](images/next/placement-front.svg){ .drawing loading=lazy }
+<figcaption>Front</figcaption>
+</figure>
+<figure markdown>
+![Next main board, back placement drawing, mirrored](images/next/placement-back.svg){ .drawing loading=lazy }
+<figcaption>Back (mirrored)</figcaption>
+</figure>
+</div>
+
+#### What changes
+
 | | v3.0.0 | Next board |
 |---|---|---|
-| Display part | Waveshare 1.5" OLED module, 44.5 × 37 mm | chilichip display module, 28 × 22 mm (OLED or TFT) |
-| Connection | 7-pin 2.54 mm header through the board | 8 SMD pads, 2.6 × 1.6 mm, 2.54 mm pitch. The module lies flat on top and is hand soldered by its castellations |
-| Hole in the board | None | None |
-| Panel | On the Waveshare module | Glued or screwed to the frame. Its flex tail plugs into the module's FPC connector, which faces the bottom of the board |
-| Holes | Four 2 mm holes for the display standoffs | The same four spots stay as M2 holes (2.2 mm, GND pads), H1 to H4, for screwing the frame to the board |
-| Height above the board | Header plus module, about 11 mm | Module 1.6 mm plus its tallest part (FPC connector) 2.0 mm = 3.6 mm |
-| Firmware pins | GP26 CLK, GP27 DIN, GP28 CS, GP22 DC, GP21 RST | The same. No firmware change |
+| Outline | 50 × 100 mm | 50 × 83.9 mm. The width is set by the 50 mm buttons module; the height by the RP2350-Plus plus the battery on the back |
+| Display | Waveshare 1.5" OLED module, 44.5 × 37 mm, on a 7-pin header | chilichip display module, 28 × 22 mm (OLED or TFT), 8 SMD pads at 2.54 mm. It lies flat on top and is hand soldered by its castellations. No hole in the board |
+| Display holes | Four 2 mm holes for the display standoffs | None. The panel is glued or screwed to the frame |
+| Radio (U3) | Bottom edge, antenna down | Top right corner of the back, antenna to the right edge. The copper keep-out is the strip along the right edge, from the top down to 25.9 mm |
+| Audio module (U2) | Top left of the back | Below the radio, turned 180° so J3 faces up. The 6 mm gap above J3 leaves room for the speaker plug |
+| Utility module (U6) | Between audio, RP2350-Plus and battery | Below the audio module |
+| Battery (BT1) | Middle of the back | Along the bottom edge |
+| R2, R3 | 0.25 W axial, through hole | 1206 SMD with hand-solder pads, right of the audio module. Through-hole leads would poke into the buttons module, which now sits over the back parts |
+| Branding | Bottom of the front | Front, right of the display module, rotated |
+| Height above the board, front | Header plus module, about 11 mm | Display module 3.6 mm (1.6 mm board plus the 2.0 mm FPC connector) |
+| Firmware pins | | No change. Same GPIOs for every part |
 
-Where U4 sits on the front, measured from the board's top-left corner, top view:
+#### Where the parts sit
 
-| | x (mm) | y (mm) |
-|---|---|---|
-| Module outline | 5.5 to 33.5 | 8.6 to 30.6 |
-| Left pads (3V3, GND, DIN, CLK from the bottom up) | 5.2 | 15.8 to 23.4 |
-| Right pads (CS, DC, RST, GND from the top down) | 33.8 | 15.8 to 23.4 |
-| H1, H2 (top holes) | 5.25, 44.75 | 5.25 |
-| H3, H4 (bottom holes) | 5.25, 44.75 | 37.25 |
+Measured from the board's top-left corner as seen from the front, so the back parts are not mirrored. Each box is the part's courtyard.
 
-Under the module: no parts and no bare copper. Tracks and tented vias are fine, because the module's bottom is a covered GND pour. The module's 3D model is `3d-models/chili-display-module-hardware.step` (the OLED module).
+| Ref | Part | Side | x (mm) | y (mm) |
+|---|---|---|---|---|
+| U4 | Display module | Front | 5.5 to 33.5 (pads 3.9 to 35.1) | 8.6 to 30.6 |
+| U5 | Buttons module | Front | 0 to 50 | 40.9 to 83.7 |
+| U1 | RP2350-Plus | Back | 7.7 to 30.9 | 0 to 52.8 (USB-C at the top edge) |
+| U3 | Radio Module 2 | Back | 32.7 to 50 | 0 to 15.9, keep-out 45 to 50 by 0 to 25.9 |
+| U2 | Audio module | Back | 31.0 to 44.6 | 22.0 to 41.7 |
+| R3, R2 | 1206 resistors | Back | 45.0 to 47.3 | 26.0 to 31.0, 31.4 to 36.4 |
+| U6 | Utility module | Back | 31.0 to 49.6 | 41.9 to 57.3 |
+| BT1 | LiPo LP802540 | Back | 1.5 to 42.1 | 57.9 to 83.5 |
 
-To fit it: tin one corner pad on the main board, hold the module in place, solder that pad, check it lies flat and square, then solder the other seven.
+Under the display module: no parts and no bare copper. Tracks and tented vias are fine, because the module's bottom is a covered GND pour. The module's 3D model is `3d-models/chili-display-module-hardware.step` (the OLED module).
+
+The board is routed with Freerouting on both layers and has a GND pour on both sides. ERC and DRC (with schematic parity) are clean. It is not fabricated yet.
+
+To fit the display module: tin one corner pad on the main board, hold the module in place, solder that pad, check it lies flat and square, then solder the other seven.
 
 ## Earlier and side projects
 
