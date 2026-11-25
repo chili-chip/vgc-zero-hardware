@@ -2653,13 +2653,13 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "vgc-zero-symbols:SSD1351_OLED_128x128_WAVESHARE"
+		(symbol "vgc-zero-symbols:ChiliDisplayModule"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "OLED"
+			(property "Reference" "U"
 				(at 2.54 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2712,7 +2712,7 @@
 					)
 				)
 			)
-			(symbol "SSD1351_OLED_128x128_WAVESHARE_0_1"
+			(symbol "ChiliDisplayModule_0_1"
 				(rectangle
 					(start -10.16 -2.54)
 					(end 12.7 -22.86)
@@ -2736,7 +2736,7 @@
 					)
 				)
 			)
-			(symbol "SSD1351_OLED_128x128_WAVESHARE_1_1"
+			(symbol "ChiliDisplayModule_1_1"
 				(pin input line
 					(at -12.7 -20.32 0)
 					(length 2.54)
@@ -2766,6 +2766,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -17.78 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6559,7 +6577,7 @@
 		)
 	)
 	(symbol
-		(lib_id "vgc-zero-symbols:SSD1351_OLED_128x128_WAVESHARE")
+		(lib_id "vgc-zero-symbols:ChiliDisplayModule")
 		(at 236.22 119.38 0)
 		(unit 1)
 		(body_style 1)
@@ -6592,7 +6610,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "vgc-zero-footprints:SSD1351_OLED_128x128_WAVESHARE"
+		(property "Footprint" "vgc-zero-footprints:ChiliDisplayModule_Host"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6603,7 +6621,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.waveshare.com/wiki/1.5inch_RGB_OLED_Module#Specification"
+		(property "Datasheet" "https://github.com/chili-chip/chili-display-module-hardware"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6615,17 +6633,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.22 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6656,6 +6663,9 @@
 		)
 		(pin "4"
 			(uuid "e01477fb-123d-42e7-adde-a8cdd57b1fe3")
+		)
+		(pin "8"
+			(uuid "2f26c62b-e492-48a1-8426-74da91a4cbcc")
 		)
 		(instances
 			(project "vgc-zero"
