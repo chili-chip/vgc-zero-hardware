@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "CHILICHIP CONSOLE")
-		(rev "v3.0.0")
+		(rev "v4.0.0")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
@@ -4919,7 +4919,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "vgc zero v3.0.0"
+	(gr_text "vgc zero v4.0.0"
 		(at 111.685 75.4 90)
 		(layer "F.SilkS")
 		(uuid "042915dc-2295-454a-a102-6fca57adf03a")

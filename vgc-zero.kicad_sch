@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "CHILICHIP CONSOLE")
-		(date "2026-11-06")
-		(rev "v3.0.0")
+		(date "2026-11-26")
+		(rev "v4.0.0")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)

@@ -74,37 +74,37 @@ The current board. Everything on this site describes it.
 | Single fully assembled board: RP2350 on the main board, all modules merged, bare SSD1351 panel | [chilichip-console-hardware](https://github.com/chili-chip/chilichip-console-hardware) | Planning. Starts from Raspberry Pi's RP2350A minimal design. Deferred until after launch ([32blit-sdk #63](https://github.com/chili-chip/32blit-sdk/issues/63)). Display plan in [#16](https://github.com/chili-chip/chilichip-console-hardware/issues/16) |
 | Custom silicone keypad | [vgc-zero-hardware #33](https://github.com/chili-chip/vgc-zero-hardware/issues/33) | Prototyping with GBA pads |
 | Shell | [vgc-zero-shell](https://github.com/chili-chip/vgc-zero-shell) | Shell 0v1 (3MF), made for the older boards |
-| Main board with the chilichip display module (OLED or TFT), 50 × 83.9 mm | This repository, `master` | Placed and routed, ERC and DRC clean. See [below](#next-main-board-display-module-and-smaller-outline). Not fabricated yet ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
+| Main board v4.0.0: chilichip display module (OLED or TFT), 50 × 83.9 mm | This repository, `master` | Placed and routed, ERC and DRC clean. See [below](#v400-not-released-display-module-and-smaller-outline). Not fabricated yet ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
 
-### Next main board: display module and smaller outline
+### v4.0.0 (not released): display module and smaller outline
 
-The next main board drops the Waveshare OLED and its 7-pin header. It takes a chilichip [display module](modules/display.md) instead: OLED or TFT, same outline and pads, so either one fits ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). With the big display module gone, the board is rearranged and shrinks from 50 × 100 mm to **50 × 83.9 mm**.
+Main board v4.0.0 drops the Waveshare OLED and its 7-pin header. It takes a chilichip [display module](modules/display.md) instead: OLED or TFT, same outline and pads, so either one fits ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). With the big display module gone, the board is rearranged and shrinks from 50 × 100 mm to **50 × 83.9 mm**.
 
 <div class="renders" markdown>
 <figure markdown>
-![Next main board, front, 3D render](images/next/iso.png){ .render loading=lazy }
+![Main board v4.0.0, front, 3D render](images/next/iso.png){ .render loading=lazy }
 <figcaption>Front: display module and buttons module (work in progress)</figcaption>
 </figure>
 <figure markdown>
-![Next main board, back, 3D render](images/next/iso-bottom.png){ .render loading=lazy }
+![Main board v4.0.0, back, 3D render](images/next/iso-bottom.png){ .render loading=lazy }
 <figcaption>Back: radio top right, audio and utility down the right, battery along the bottom</figcaption>
 </figure>
 </div>
 
 <div class="renders" markdown>
 <figure markdown>
-![Next main board, front placement drawing](images/next/placement-front.svg){ .drawing loading=lazy }
+![Main board v4.0.0, front placement drawing](images/next/placement-front.svg){ .drawing loading=lazy }
 <figcaption>Front</figcaption>
 </figure>
 <figure markdown>
-![Next main board, back placement drawing, mirrored](images/next/placement-back.svg){ .drawing loading=lazy }
+![Main board v4.0.0, back placement drawing, mirrored](images/next/placement-back.svg){ .drawing loading=lazy }
 <figcaption>Back (mirrored)</figcaption>
 </figure>
 </div>
 
 #### What changes
 
-| | v3.0.0 | Next board |
+| | v3.0.0 | v4.0.0 |
 |---|---|---|
 | Outline | 50 × 100 mm | 50 × 83.9 mm. The width is set by the 50 mm buttons module; the height by the RP2350-Plus plus the battery on the back |
 | Display | Waveshare 1.5" OLED module, 44.5 × 37 mm, on a 7-pin header | chilichip display module, 28 × 22 mm (OLED or TFT), 8 SMD pads at 2.54 mm. It lies flat on top and is hand soldered by its castellations. No hole in the board |
