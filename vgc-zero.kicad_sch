@@ -5998,7 +5998,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RF_Module:RMC20452T"
+		(property "Footprint" "vgc-zero-footprints:RM2_AntennaEdge"
 			(at 241.3 50.8 0)
 			(hide yes)
 			(show_name no)
