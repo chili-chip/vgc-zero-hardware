@@ -74,6 +74,71 @@ The current board. Everything on this site describes it.
 | Single fully assembled board: RP2350 on the main board, all modules merged, bare SSD1351 panel | [chilichip-console-hardware](https://github.com/chili-chip/chilichip-console-hardware) | Planning. Starts from Raspberry Pi's RP2350A minimal design. Deferred until after launch ([32blit-sdk #63](https://github.com/chili-chip/32blit-sdk/issues/63)). Display plan in [#16](https://github.com/chili-chip/chilichip-console-hardware/issues/16) |
 | Custom silicone keypad | [vgc-zero-hardware #33](https://github.com/chili-chip/vgc-zero-hardware/issues/33) | Prototyping with GBA pads |
 | Shell | [vgc-zero-shell](https://github.com/chili-chip/vgc-zero-shell) | Shell 0v1 (3MF), made for the older boards |
+| Main board v4.0.0: chilichip TFT display module, 2.0" screen, 50 × 83.9 mm | This repository, `master` | Placed and routed, ERC and DRC clean. See [below](#v400-not-released-display-module-and-smaller-outline). Not fabricated yet ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)) |
+
+### v4.0.0 (not released): display module and smaller outline
+
+Main board v4.0.0 drops the Waveshare OLED and its 7-pin header. It takes the chilichip TFT [display module](modules/display.md) with a 2.0" 320 × 240 panel (ER-TFT020-3) instead ([#41](https://github.com/chili-chip/vgc-zero-hardware/issues/41)). The smaller screens are dropped: this board is for the 2.0" panel only. With the big display module gone, the board is rearranged and shrinks from 50 × 100 mm to **50 × 83.9 mm**.
+
+<div class="renders" markdown>
+<figure markdown>
+![Main board v4.0.0, front, 3D render](images/next/iso.png){ .render loading=lazy }
+<figcaption>Front: display module and buttons module (work in progress)</figcaption>
+</figure>
+<figure markdown>
+![Main board v4.0.0, back, 3D render](images/next/iso-bottom.png){ .render loading=lazy }
+<figcaption>Back: radio top right with the antenna on the top edge, audio and utility down the right, battery along the bottom</figcaption>
+</figure>
+</div>
+
+<div class="renders" markdown>
+<figure markdown>
+![Main board v4.0.0, front placement drawing](images/next/placement-front.svg){ .drawing loading=lazy }
+<figcaption>Front</figcaption>
+</figure>
+<figure markdown>
+![Main board v4.0.0, back placement drawing, mirrored](images/next/placement-back.svg){ .drawing loading=lazy }
+<figcaption>Back (mirrored)</figcaption>
+</figure>
+</div>
+
+#### What changes
+
+| | v3.0.0 | v4.0.0 |
+|---|---|---|
+| Outline | 50 × 100 mm | 50 × 83.9 mm. The width is set by the 50 mm buttons module; the height by the RP2350-Plus plus the battery on the back |
+| Display | Waveshare 1.5" OLED module, 44.5 × 37 mm, on a 7-pin header | chilichip TFT display module, 28 × 22 mm, 8 SMD pads at 2.54 mm, for the 2.0" 320 × 240 panel. It lies flat on top and is hand soldered by its castellations. No hole in the board. It is turned so its FPC connector faces left, where the panel's folded tail ends |
+| Display holes | Four 2 mm holes for the display standoffs | None. The panel is glued or screwed to the frame |
+| Radio (U3) | Bottom edge, antenna down | Top right corner of the back, antenna on the top edge. The copper keep-out is x 31 to 50 mm, y 0 to 5.2 mm. The panel overlaps the antenna end by about 1 mm, the RP2350-Plus sits 4 mm to its left. Footprint `RM2_AntennaEdge` is the library RMC20452T with the keep-out trimmed to 11 mm each side |
+| Audio module (U2) | Top left of the back | Below the radio, turned 180° so J3 faces up. The 6 mm gap above J3 leaves room for the speaker plug |
+| Utility module (U6) | Between audio, RP2350-Plus and battery | Below the audio module |
+| Battery (BT1) | Middle of the back | Along the bottom edge |
+| R2, R3 | 0.25 W axial, through hole | 1206 SMD with hand-solder pads, right of the audio module. Through-hole leads would poke into the buttons module, which now sits over the back parts |
+| Branding | Bottom of the front | Front, right of the display module, rotated |
+| Height above the board, front | Header plus module, about 11 mm | Display module 3.6 mm (1.6 mm board plus the 2.0 mm FPC connector) |
+| Firmware pins | | No change. Same GPIOs for every part |
+
+#### Where the parts sit
+
+Measured from the board's top-left corner as seen from the front, so the back parts are not mirrored. Each box is the part's courtyard.
+
+| Ref | Part | Side | x (mm) | y (mm) |
+|---|---|---|---|---|
+| U4 | Display module, turned 90° (FPC connector at x 10.3, y 17.5) | Front | 10.25 to 32.35 | 8.95 to 37.05 (pads 7.9 to 38.1) |
+| | 2.0" panel (glued to the frame, not the board) | Front | 1.1 to 48.9 | 4.0 to 38.6 |
+| U5 | Buttons module | Front | 0 to 50 | 40.9 to 83.7 |
+| U1 | RP2350-Plus | Back | 7.7 to 30.9 | 0 to 52.8 (USB-C at the top edge) |
+| U3 | Radio Module 2 | Back | 34.8 to 49.4 | 0 to 16.6 (antenna 0 to 5), keep-out 31 to 50 by 0 to 5.2 |
+| U2 | Audio module | Back | 31.0 to 44.6 | 22.0 to 41.7 |
+| R3, R2 | 1206 resistors | Back | 45.0 to 47.3 | 26.0 to 31.0, 31.4 to 36.4 |
+| U6 | Utility module | Back | 31.0 to 49.6 | 41.9 to 57.3 |
+| BT1 | LiPo LP802540 | Back | 1.5 to 42.1 | 57.9 to 83.5 |
+
+Under the display module: no parts and no bare copper. Tracks and tented vias are fine, because the module's bottom is a covered GND pour. The module's 3D model is `3d-models/chili-display-module-hardware.step` (the TFT module with its FPC connector off centre).
+
+The board is routed with Freerouting on both layers and has a GND pour on both sides. ERC and DRC (with schematic parity) are clean. It is not fabricated yet.
+
+To fit the display module: tin one corner pad on the main board, hold the module in place, solder that pad, check it lies flat and square, then solder the other seven.
 
 ## Earlier and side projects
 
